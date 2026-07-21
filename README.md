@@ -6,7 +6,7 @@ Marketing website for Alpha Info Tech, built with Next.js (App Router), TypeScri
 
 - `/` — Landing page (hero, stats, about, services, business model teaser, CTA)
 - `/our-model` — Detailed breakdown of the three-stage growth model and company values
-- `/contact` — Contact form (emails submissions via a Node/Nodemailer API route) + contact details
+- `/contact` — Contact form (logs submissions to a Google Sheet via a Google Apps Script webhook) + contact details
 - `/privacy-policy` — Privacy policy
 - `/terms` — Terms & conditions
 
@@ -14,7 +14,7 @@ Marketing website for Alpha Info Tech, built with Next.js (App Router), TypeScri
 
 - **Next.js 16** (App Router, TypeScript)
 - **Tailwind CSS v4**
-- **Node.js API route** (`/api/contact`) using **Nodemailer** to send contact form emails via SMTP
+- **Node.js API route** (`/api/contact`) that forwards contact form submissions to a **Google Apps Script** webhook, which appends them to a Google Sheet
 - **Zod** for server-side form validation
 - **lucide-react** for icons
 
@@ -22,27 +22,54 @@ Marketing website for Alpha Info Tech, built with Next.js (App Router), TypeScri
 
 ```bash
 npm install
-cp .env.example .env.local   # then fill in real SMTP credentials
+cp .env.example .env.local   # then fill in the Apps Script URL
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
-Without SMTP credentials configured, the site still runs — only the contact form's email send will fail (it returns a friendly error to the user).
+Without `GOOGLE_SHEET_SCRIPT_URL` configured, the site still runs — only the contact form's submission will fail (it returns a friendly error to the user).
 
 ## Environment Variables
 
-See [.env.example](.env.example). Required for the contact form to actually send email:
+See [.env.example](.env.example). Required for the contact form to actually log submissions:
 
 | Variable | Description |
 | --- | --- |
-| `SMTP_HOST` | SMTP server host, e.g. `smtp.gmail.com` |
-| `SMTP_PORT` | SMTP port, e.g. `587` |
-| `SMTP_USER` | SMTP username / from address |
-| `SMTP_PASS` | SMTP password or app password |
+| `GOOGLE_SHEET_SCRIPT_URL` | Deployed Google Apps Script Web App URL (ends in `/exec`) |
 | `NEXT_PUBLIC_SITE_URL` | Public site URL, used in metadata/sitemap/robots |
 
-If using Gmail, generate an [App Password](https://myaccount.google.com/apppasswords) rather than using the account password directly.
+### Setting up the Google Sheet + Apps Script
+
+1. Create a new Google Sheet. Add a header row: `Timestamp | Name | Email | Phone | Message`.
+2. In the sheet, go to **Extensions → Apps Script**.
+3. Replace the default code with:
+
+   ```javascript
+   function doPost(e) {
+     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+     var data = JSON.parse(e.postData.contents);
+
+     sheet.appendRow([
+       data.submittedAt || new Date().toISOString(),
+       data.name || "",
+       data.email || "",
+       data.phone || "",
+       data.message || "",
+     ]);
+
+     return ContentService
+       .createTextOutput(JSON.stringify({ ok: true }))
+       .setMimeType(ContentService.MimeType.JSON);
+   }
+   ```
+
+4. Click **Deploy → New deployment**, select type **Web app**.
+5. Set "Execute as" to **Me** and "Who has access" to **Anyone**.
+6. Deploy, authorize the script when prompted, and copy the Web App URL (ends in `/exec`).
+7. Set that URL as `GOOGLE_SHEET_SCRIPT_URL` in `.env.local` (and in your hosting provider's env vars for production).
+
+Whenever you edit the script, you must create a **new deployment** (or manage versions) for changes to take effect on the existing URL.
 
 ## Editing Content
 

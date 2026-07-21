@@ -272,6 +272,240 @@ export const founderStory = {
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/our-model", label: "Our Model" },
-  { href: "/founder-message", label: "Founder Message" },
+  { href: "/social-media-solutions", label: "Social Media Solutions" },
+  { href: "/founder-message", label: "Vision" },
   { href: "/contact", label: "Contact" },
 ];
+
+export const socialMedia = {
+  eyebrow: "Social Media & Digital Business Solutions",
+  title: "Grow Your Business. Not Your Workload.",
+  intro:
+    "Your customers are already on Instagram and WhatsApp. The real question is: can your business respond fast enough? We help small businesses transform their social media into a complete digital business platform — capturing every enquiry, automating repetitive work, and creating systems that keep working even when you're offline.",
+  subIntro:
+    "Whether you're just starting or handling hundreds of enquiries every day, we provide practical, affordable digital solutions that fit your business.",
+
+  problems: [
+    {
+      title: "Missed Customer Enquiries",
+      description: "Every unanswered DM or WhatsApp message is a potential lost sale.",
+    },
+    {
+      title: "Repetitive Customer Questions",
+      description:
+        "Price? Stock? Delivery? Location? Payment? Answering the same questions repeatedly wastes valuable business hours.",
+    },
+    {
+      title: "No Customer Database",
+      description: "Thousands of chats... but no organized customer list for follow-up.",
+    },
+    {
+      title: "Slow Quotations",
+      description:
+        "Manual quotations take hours or days. Customers often purchase before receiving your quote.",
+    },
+    {
+      title: "Business Depends Only on Instagram",
+      description:
+        "If your account is restricted, hacked, or unavailable, your enquiries and customer relationships disappear with it.",
+    },
+    {
+      title: "Manual Business Operations",
+      description: "Orders, customer follow-ups, lead tracking, payments — everything depends on you.",
+    },
+  ],
+
+  solutions: [
+    {
+      key: "instagram",
+      title: "AI Instagram Chatbot",
+      description: "Transform your Instagram into a 24×7 sales assistant.",
+      items: [
+        "Instant DM replies",
+        "FAQ automation",
+        "Product recommendations",
+        "Lead capture",
+        "Appointment enquiries",
+        "Human handover",
+        "Business-specific AI responses",
+      ],
+      footnote: "Ideal for businesses receiving regular Instagram enquiries.",
+    },
+    {
+      key: "whatsapp",
+      title: "AI WhatsApp Automation",
+      description: "Respond faster and serve more customers.",
+      items: [
+        "Auto replies",
+        "Broadcast messaging",
+        "Customer follow-ups",
+        "Business workflow automation",
+        "AI-powered conversations",
+      ],
+      footnote:
+        "Three growth stages — Starter: Customer Contact Directory, Growth: Broadcast + Auto Reply, Scale: AI Conversation Assistant. One-time implementation, scale only when your business grows.",
+    },
+    {
+      key: "contacts",
+      title: "WhatsApp Contact Management",
+      description: "Your customer data shouldn't stay buried inside chat history.",
+      items: [
+        "Easy follow-up",
+        "Organized customer records",
+        "Excel & CSV export",
+        "Better sales management",
+        "Reduced manual searching",
+      ],
+      footnote:
+        "We help organize your WhatsApp business contacts into structured, searchable customer lists.",
+    },
+    {
+      key: "knowledge",
+      title: "AI Knowledge Chatbot",
+      description: "Train your chatbot using your own business knowledge.",
+      items: [
+        "Product catalogues",
+        "Price lists",
+        "Company policies",
+        "FAQs",
+        "Service information",
+        "Internal documents",
+      ],
+      footnote: "Every answer reflects your business — not generic AI.",
+    },
+    {
+      key: "website",
+      title: "Professional Business Website",
+      description: "Build credibility beyond social media.",
+      items: [
+        "Responsive website",
+        "Contact forms",
+        "Product pages",
+        "Google Maps",
+        "SEO optimization",
+        "SSL security",
+        "Mobile optimized",
+      ],
+    },
+    {
+      key: "workspace",
+      title: "Business Website + Google Workspace",
+      description: "Everything needed for a professional online presence.",
+      items: [
+        "Business website",
+        "Custom domain",
+        "Professional email",
+        "Google Workspace setup",
+        "Shared calendar",
+        "Google Drive",
+        "Business collaboration tools",
+      ],
+      footnote: "Perfect for businesses moving from personal accounts to professional operations.",
+    },
+    {
+      key: "ecommerce",
+      title: "Micro E-Commerce Website + Add-ons",
+      description: "Start selling online without investing in a large e-commerce platform.",
+      items: [
+        "Online product catalogue",
+        "WhatsApp ordering",
+        "Payment integration",
+        "Customer enquiry forms",
+        "Mobile friendly design",
+      ],
+      footnote:
+        "Optional add-ons: AI chatbot, WhatsApp automation, barcode & QR management, inventory management.",
+    },
+    {
+      key: "database",
+      title: "Customer Database & Analytics Dashboard",
+      description: "Built especially for small businesses.",
+      items: ["Customer database", "Analytics dashboard"],
+    },
+    {
+      key: "automation",
+      title: "Business Automation",
+      description: "Automate repetitive work.",
+      items: [
+        "Appointment booking",
+        "Customer registration",
+        "Order collection",
+        "Lead qualification",
+        "Complaint management",
+        "Quotation generation",
+        "Customer follow-ups",
+        "Payment reminders",
+      ],
+    },
+  ],
+
+  growthPath: [
+    {
+      stage: "Stage 1",
+      name: "Starter",
+      description: "Perfect for businesses beginning their digital journey.",
+      items: ["Professional website", "Google Workspace", "Contact forms", "Business email", "Basic add-ons"],
+    },
+    {
+      stage: "Stage 2",
+      name: "Growth",
+      description: "Increase customer engagement.",
+      items: [
+        "AI chatbot",
+        "WhatsApp automation",
+        "Lead management",
+        "Customer database",
+        "Business reports",
+      ],
+    },
+    {
+      stage: "Stage 3",
+      name: "Scale",
+      description: "Operate smarter with AI.",
+      items: [
+        "AI assistants",
+        "Advanced automation",
+        "Integrated business systems",
+        "Analytics dashboard",
+        "Custom software",
+      ],
+    },
+  ],
+
+  tools: [
+    "Instagram",
+    "WhatsApp",
+    "Google Workspace",
+    "Google Forms",
+    "Google Sheets",
+    "Smartphones",
+    "Websites",
+  ],
+
+  industries: [
+    "Instagram Businesses",
+    "WhatsApp Businesses",
+    "Retail Shops",
+    "Home-Based Businesses",
+    "Manufacturers",
+    "Distributors",
+    "Service Providers",
+    "Healthcare Clinics",
+    "Educational Institutions",
+    "Restaurants",
+    "Travel Agencies",
+    "Real Estate",
+    "Startups",
+  ],
+
+  whyUs: [
+    "Affordable digital solutions",
+    "One-time implementation options for many solutions",
+    "AI-powered automation",
+    "Business-specific customization",
+    "Fast deployment",
+    "Easy to use",
+    "Scalable as your business grows",
+    "Local support",
+  ],
+};

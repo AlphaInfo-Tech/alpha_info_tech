@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, Clock } from "lucide-react";
 import Container from "@/components/Container";
 import ContactForm from "@/components/ContactForm";
 import { company } from "@/lib/content";
@@ -22,11 +22,6 @@ const infoItems = [
     label: "Phone",
     value: company.phones.join(" / "),
     href: `tel:${company.phones[0].replace(/\s+/g, "")}`,
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: company.address,
   },
   {
     icon: Clock,

@@ -1,0 +1,527 @@
+================================================================================
+ALPHA INFO TECH — WEBSITE CONTENT (ALL PAGES)
+================================================================================
+This file contains every piece of copy used across the site, page by page,
+in the order it appears on screen. Source of truth for most of this lives in
+src/lib/content.ts — edit there first for anything reused across pages.
+
+
+================================================================================
+SHARED — NAVIGATION BAR (appears on every page)
+================================================================================
+Logo: AI  /  Alpha Info Tech
+
+Nav links:
+- Home
+- Our Model
+- Founder Message
+- Contact
+
+Header button: Book a Free Call
+
+
+================================================================================
+PAGE 1 — HOME  (/)
+================================================================================
+
+--- HERO ---
+Eyebrow: Building Sustainable Solutions
+
+Headline: Simple Digital Solutions for growing businesses.
+
+Body:
+Not just software, it will be your solution. We're the technology partner
+for small business — we understand your challenges, speak your language,
+and grow with you from your first website to a fully custom platform.
+
+Buttons: Book a Free Strategy Call | See how it works
+
+Stats row:
+- 40%   — Increase in lead conversions
+- 50%   — Faster turnaround times
+- 71%   — Savings vs. standard software subscriptions
+- 2.5X  — Business growth with automated operations
+
+--- ABOUT US ---
+Eyebrow: About Us
+Heading: Built from real business problems, not theory
+
+Alpha Info Tech didn't start in a boardroom. It started with long hours,
+frustrated customers, and payment delays we lived through ourselves. We
+built solutions to fix our own operational pain points first — and our
+module library grew organically from there, long before we ever offered
+it to other businesses.
+
+That's still how we work today. Every module in our library exists
+because someone hit that exact wall running a real business — which
+means what you get is tested by us before it ever reaches you.
+
+Panel — "What you get, every time":
+- Pay exclusively for the features you actually use
+- Systems that scale as your business grows
+- Designed around your existing team workflows
+- Complete transparency, no hidden costs
+- No forced learning curves
+
+--- WHAT WE BUILD (SERVICES) ---
+Eyebrow: What We Build
+Heading: Modules for every part of your business
+Description: A growing library of purpose-built modules across sales,
+operations, and finance — pick only what you need, add more as you grow.
+
+SALES
+"Win more business and follow up before it goes cold."
+- Lead / Enquiry Tracker
+- Quotation Generator
+- Coupon / Promo Code Generator
+- Digital Catalog
+- Event / Class Registration
+- Digital Business Card
+- Quote Follow-up Reminder
+
+OPERATIONS
+"Keep people, sites, and assets running without the chaos."
+- Attendance System
+- Site Progress Tracker
+- Material Request Tracker
+- Vehicle / Asset Log
+- Visitor Register
+- Staff Task Tracker
+- WhatsApp Follow-up CRM
+
+FINANCE
+"Protect your cash flow and stop chasing payments manually."
+- AMC Tracker
+- Warranty Expiry Alerts
+- Payment Reminder System
+- Invoice Generator
+- Expense & Petty Cash Tracker
+- Inventory Management
+- Salary Preparation Assistant
+
+--- OUR MODEL (TEASER) ---
+Eyebrow: Our Model
+Heading: Grow at your own pace, in three stages
+Description: You don't need enterprise software on day one. We meet you
+where you are and build the next stage only when you're ready for it.
+
+/01  Starter   (Stage 1)
+Go digital in days, not months — using only the apps your team already
+carries in their pocket.
+
+/02  Growth    (Stage 2)
+Faster delivery, lower cost, the same business outcome — using proven,
+enterprise-grade platforms instead of building everything from scratch.
+
+/03  Scale     (Stage 3)
+Your business, your platform, built to enterprise grade — full-stack
+custom development with AI and automation embedded from day one.
+
+Button: Explore our full model
+
+--- CTA BANNER ---
+Heading: Ready to build a system that actually fits your business?
+Body: Book a free strategy call and we'll help you figure out exactly
+where to start — no pressure, no jargon.
+Button: Book a Free Strategy Call
+
+
+================================================================================
+PAGE 2 — OUR MODEL  (/our-model)
+================================================================================
+
+--- HERO ---
+Eyebrow: Our Model
+Heading: Software that grows exactly as fast as you do
+
+Alpha Info Tech is "the technology partner for small business" — we
+understand your challenges, speak your language, and evolve alongside
+you from your first website to a proprietary platform. No forced leaps,
+no wasted spend.
+
+--- THREE STAGES ---
+Eyebrow: Three Stages
+Heading: You move forward when you're ready, not before
+Description: Every business we work with starts somewhere different.
+Our job is to meet you there and build the next stage only once you've
+outgrown the last one.
+
+──────────────────────────────
+01 — STAGE 1: STARTER
+Tagline: Website + Add-ons
+──────────────────────────────
+Go digital in days, not months — using only the apps your team already
+carries in their pocket.
+
+Highlights:
+- Fast to launch, low cost to start
+- Leverages existing tools instead of reinventing them
+- Perfect first step for businesses going digital
+
+What this fixes:
+- Enquiries get forgotten
+- Follow-ups don't happen
+- Renewals get missed
+- You have no idea what your team did today
+
+What's included:
+- Infrastructure: No server or cloud setup required
+- Data storage: Runs on Google Sheets, using the Gmail you already have
+- Maintenance: No AMC — no annual maintenance contract
+- Interface: Familiar rows-and-columns Google Sheet, nothing new to learn
+- Team requirements: No IT staff or coding knowledge needed
+- Cost structure: One-time setup — no recurring hosting fees
+
+Built on: Smartphone, Internet package, WhatsApp, Google Sheets & Gmail
+
+Who it's for — Small businesses already running on WhatsApp and Gmail —
+no IT staff, no budget for enterprise software, but tired of losing
+track of enquiries.
+
+Philosophy: "Pay only for what you need. You already pay for all of it
+— your phone, your data plan, WhatsApp, Google. We just make it work
+together."
+
+──────────────────────────────
+02 — STAGE 2: GROWTH
+Tagline: Pre-built. Configured.
+──────────────────────────────
+Faster delivery, lower cost, the same business outcome — using proven,
+enterprise-grade platforms instead of building everything from scratch.
+
+Highlights:
+- 2–4 week deployment timeline
+- Enterprise-grade infrastructure (Zoho, Microsoft, Google backbone)
+- Modular architecture — add capabilities without a system rebuild
+- Dramatically lower cost than custom development
+
+Platforms: Zoho Creator, Microsoft Power Apps, Google AppSheet,
+Alpha Info Tech Systems
+
+Platforms we configure:
+
+  Zoho Creator (Low-code)
+  - Multi-step workflow automation with approvals and escalations
+  - Custom dashboards and role-specific reports
+  - Zoho Books integration for invoices and payments
+  - Native Android and iOS apps
+
+  Google AppSheet (No-code)
+  - Google Sheets as the native database
+  - Offline mode with automatic syncing
+  - Image capture and GPS tagging
+  - Runs on your existing Google Workspace account
+
+  Alpha Info Tech Systems (Battle-tested proprietary modules)
+  - ChatBot functionality
+  - IoT device integration
+  - Custom dashboards
+
+Who it's for — Small-to-medium businesses with operational complexity
+that need faster implementation than a fully custom build.
+
+Philosophy: "We don't build from scratch — we configure what's already
+proven."
+
+──────────────────────────────
+03 — STAGE 3: SCALE
+Tagline: Owns your technology, not rents it
+──────────────────────────────
+Your business, your platform, built to enterprise grade — full-stack
+custom development with AI and automation embedded from day one.
+
+Highlights:
+- Your entity permanently owns all source code
+- Zero vendor lock-in by design
+- Full code handover upon completion
+- Enterprise-grade security and scalability from day one
+- Supports multi-team, multi-location operations with unified reporting
+- No proprietary frameworks restricting future flexibility
+
+What's included:
+- Custom Web Application: A role-based, multi-module platform
+  engineered specifically for your operations
+- Mobile Applications: Native Android apps with offline capability and
+  push notifications
+- API & Integration Layer: REST APIs, webhooks, payment gateway
+  integration, and third-party connections
+- Custom ERP / Core Business Platform: End-to-end coverage of
+  procurement, inventory, production, sales, HR, finance, and reporting
+
+Who it's for — Established businesses that need a bespoke platform
+generic SaaS can't support — or that want to own their technology
+outright rather than rent it forever.
+
+Philosophy: "Your own software — built around your exact workflow. No
+off-the-shelf limits."
+
+--- WHAT DRIVES US (VALUES) ---
+Eyebrow: What Drives Us
+Heading: The values behind every module we build
+
+1. Small, Sustainable, Smart
+   We build systems sized for where you are today, not for a business
+   you don't have yet.
+
+2. Honesty Over Impressiveness
+   We'd rather tell you the truth about what you need than sell you
+   what looks good on paper.
+
+3. Experience-Based Solutions
+   Every module exists because we hit that exact problem in our own
+   business first.
+
+4. Client-Paced Growth
+   You move to the next stage when you're ready for it, not on our
+   sales timeline.
+
+5. Long-Term Focus
+   We build relationships and systems meant to outlast a single
+   project.
+
+6. Specificity
+   Generic software creates generic results. We build for your
+   workflow, not a template.
+
+--- CTA BANNER ---
+Heading: Not sure which stage fits your business?
+Body: Tell us where you are today and we'll map out the right starting
+point — for free.
+Button: Book a Free Strategy Call
+
+
+================================================================================
+PAGE 3 — FOUNDER MESSAGE  (/founder-message)
+================================================================================
+
+--- HERO ---
+Eyebrow: Why We Started
+Heading: Built to fix our own problems first
+
+Alpha Info Tech didn't start as a software company with a formal office
+and a product roadmap. It started because we were running a small
+business ourselves, and the software available to us didn't fit —
+everything on the market was oversized, overpriced, and built for a
+company we weren't.
+
+--- THE STORY ---
+/01 — The Problem
+We were losing business we should have won
+
+Enquiries came in over WhatsApp and got buried in the chat within a
+day. Follow-ups slipped. We didn't need a CRM with fifty features we'd
+never touch — we needed to stop losing leads we'd already earned.
+
+/02 — The First Fix
+A WhatsApp enquiry tracker, built for us
+
+So we built one. A simple system to track enquiries coming in over
+WhatsApp. In its first week alone, it recovered four leads that would
+otherwise have fallen through the cracks. Then we built a quotation
+generator, because sending quotes fast was costing us deals too.
+
+/03 — The Turning Point
+A colleague asked for the same setup
+
+Every tool we built solved a problem we were actually living through —
+not a theoretical one. When a colleague running their own business saw
+what we'd put together and asked for the same setup, that request
+became the start of Alpha Info Tech's module library, long before any
+of it was for sale.
+
+--- CLOSING QUOTE ---
+"That's still how we build today. Every module in our library exists
+because someone on our own team hit that exact wall first — which
+means what you get from us has already been tested where it matters
+most: in a real, small business, under real pressure."
+— The Alpha Info Tech Team
+
+--- CTA BANNER ---
+Heading: Your problem could be our next module
+Body: If something about how your business runs is broken, tell us
+about it. There's a good chance we've already fixed it for someone
+else.
+Button: Book a Free Strategy Call
+
+
+================================================================================
+PAGE 4 — CONTACT  (/contact)
+================================================================================
+
+--- HERO ---
+Eyebrow: Contact Us
+Heading: Let's talk about your business
+
+Book a free strategy call with our experts — tell us where you're stuck
+and we'll help you map out the right starting point.
+
+--- GET IN TOUCH ---
+Heading: Get in touch
+Body: Prefer to reach out directly? Use any of the details below.
+
+Email:          alphainfotech@gmail.com
+Phone:          +91 99943 12900 / +91 93446 89836
+Location:       Erode, Tamil Nadu, India
+Response Time:  We get back to you within 24 hours.
+
+--- CONTACT FORM ---
+Fields: Name*, Email*, Phone, Message*
+Placeholders:
+  Name: "Your name"
+  Email: "you@company.com"
+  Phone: "+91 00000 00000"
+  Message: "Tell us a bit about your business and what you're looking for..."
+Submit button: Send Message
+
+Success state:
+  Heading: Message sent
+  Body: Thanks for reaching out — we get back to you within 24 hours.
+  Link: Send another message
+
+Error state (shown only if sending fails):
+  "Something went wrong sending your message. Please email us directly."
+
+
+================================================================================
+PAGE 5 — PRIVACY POLICY  (/privacy-policy)
+================================================================================
+Last updated: 19 July 2026
+
+Alpha Info Tech ("we", "us", or "our") respects your privacy and is
+committed to protecting the personal information you share with us
+through our website, our software modules, and our communications with
+you. This policy explains what we collect, how we use it, and the
+choices you have.
+
+1. Information We Collect
+- Information you provide: your name, email address, phone number, and
+  any details you share with us via our contact form, email, or phone
+  calls.
+- Business information: details about your business operations that
+  you share with us to help configure or build the modules and systems
+  we deliver.
+- Usage data: basic technical information such as browser type, device
+  type, and pages visited, collected automatically when you use our
+  website.
+
+2. How We Use Your Information
+- To respond to your enquiries and schedule strategy calls
+- To design, build, and support the software modules you request
+- To send you updates relevant to services you have asked about
+- To improve our website and the way we communicate with clients
+- To meet legal, accounting, and regulatory requirements
+
+3. How We Share Information
+We do not sell your personal information. We may share it with trusted
+service providers who help us operate (for example, email or hosting
+providers) strictly to deliver our services, and only to the extent
+necessary. We may also disclose information if required by law.
+
+4. Data Storage and Security
+We take reasonable technical and organizational measures to protect the
+information you share with us against unauthorized access, loss, or
+misuse. No method of transmission or storage is completely secure, and
+we encourage you to share only what is necessary when contacting us.
+
+5. Cookies
+Our website may use minimal, functional cookies to keep the site
+working correctly. We do not currently use cookies for advertising or
+cross-site tracking.
+
+6. Your Rights
+You can ask us to access, correct, or delete the personal information
+we hold about you at any time by contacting us at
+alphainfotech@gmail.com. We will respond within a reasonable timeframe.
+
+7. Changes to This Policy
+We may update this policy from time to time to reflect changes in our
+practices or for legal reasons. The "Last updated" date at the top of
+this page will always reflect the most recent revision.
+
+8. Contact Us
+If you have any questions about this Privacy Policy, please contact us
+at alphainfotech@gmail.com or call +91 99943 12900 / +91 93446 89836.
+
+
+================================================================================
+PAGE 6 — TERMS & CONDITIONS  (/terms)
+================================================================================
+Last updated: 19 July 2026
+
+These Terms & Conditions govern your use of the Alpha Info Tech website
+and any services you engage us for. By using our website or working
+with us, you agree to these terms.
+
+1. Our Services
+Alpha Info Tech designs, builds, and supports digital modules and
+platforms for small and growing businesses across sales, operations,
+and finance. The specific scope, timeline, and pricing for any
+engagement will be agreed with you separately before work begins.
+
+2. Website Use
+You agree to use our website only for lawful purposes and in a way that
+does not infringe the rights of, or restrict or inhibit the use of,
+this site by anyone else.
+
+3. Intellectual Property
+Unless otherwise agreed in writing, the content on this website —
+including text, graphics, logos, and module descriptions — is the
+property of Alpha Info Tech and may not be reproduced without
+permission. Ownership of custom software delivered under a paid
+engagement will be set out in the relevant project agreement.
+
+4. Quotes and Payments
+Quotations provided by Alpha Info Tech are valid for the period stated
+at the time of issue. Payment terms, milestones, and applicable taxes
+(including GST where relevant) will be detailed in your project
+agreement or invoice.
+
+5. Limitation of Liability
+We work to deliver reliable, well-tested software, but we do not
+guarantee that any module or platform will be uninterrupted or entirely
+error-free. To the extent permitted by law, Alpha Info Tech is not
+liable for indirect or consequential losses arising from the use of our
+website or services.
+
+6. Third-Party Tools
+Some of our solutions are built on third-party platforms such as Zoho
+Creator or Google AppSheet. Your use of those platforms is also subject
+to their respective terms of service.
+
+7. Changes to These Terms
+We may revise these Terms & Conditions from time to time. Continued use
+of our website or services after changes are posted constitutes
+acceptance of the updated terms.
+
+8. Governing Law
+These terms are governed by the laws of India, and any disputes will be
+subject to the jurisdiction of the courts in Tamil Nadu.
+
+9. Contact Us
+Questions about these terms can be sent to alphainfotech@gmail.com or
++91 99943 12900 / +91 93446 89836.
+
+
+================================================================================
+SHARED — FOOTER (appears on every page)
+================================================================================
+Alpha Info Tech
+Simple Digital Solutions for Growing Businesses. Not just software, it
+will be your solution.
+
+NAVIGATE
+- Home
+- Our Model
+- Founder Message
+- Contact
+- Privacy Policy
+- Terms & Conditions
+
+CONTACT
+- alphainfotech@gmail.com
+- +91 99943 12900
+- +91 93446 89836
+- Erode, Tamil Nadu, India
+
+Bottom bar:
+© [year] Alpha Info Tech. All rights reserved.        Building Sustainable Solutions

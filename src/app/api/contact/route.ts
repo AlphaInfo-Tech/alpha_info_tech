@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { getTransporter } from "@/lib/mailer";
-import { company } from "@/lib/content";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2).max(120),
@@ -11,15 +9,6 @@ const contactSchema = z.object({
   // Honeypot field: real users never fill this in, bots often do.
   company: z.string().max(0).optional().or(z.literal("")),
 });
-
-function escapeHtml(value: string) {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -38,28 +27,36 @@ export async function POST(request: Request) {
   }
 
   const { name, email, phone, message } = parsed.data;
+  const scriptUrl = process.env.GOOGLE_SHEET_SCRIPT_URL;
+
+  if (!scriptUrl) {
+    console.error("GOOGLE_SHEET_SCRIPT_URL is not configured.");
+    return NextResponse.json(
+      { error: "Something went wrong sending your message. Please email us directly." },
+      { status: 500 }
+    );
+  }
 
   try {
-    const transporter = getTransporter();
-    await transporter.sendMail({
-      from: `"${company.name} Website" <${process.env.SMTP_USER}>`,
-      to: company.email,
-      replyTo: email,
-      subject: `New enquiry from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "-"}\n\n${message}`,
-      html: `
-        <h2>New enquiry from the website</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Phone:</strong> ${escapeHtml(phone || "-")}</p>
-        <p><strong>Message:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
-      `,
+    const res = await fetch(scriptUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        phone: phone || "",
+        message,
+        submittedAt: new Date().toISOString(),
+      }),
     });
+
+    if (!res.ok) {
+      throw new Error(`Apps Script responded with ${res.status}`);
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error("Failed to send contact email:", error);
+    console.error("Failed to log contact submission to Google Sheet:", error);
     return NextResponse.json(
       { error: "Something went wrong sending your message. Please email us directly." },
       { status: 500 }

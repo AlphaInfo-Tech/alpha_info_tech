@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Container from "./Container";
 import { company, navLinks } from "@/lib/content";
 
@@ -73,10 +73,6 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-brand-400" />
-                <span>{company.address}</span>
-              </li>
             </ul>
           </div>
         </div>
