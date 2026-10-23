@@ -24,7 +24,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
           {navLinks.map((link) => {
             const active = pathname === link.href;
             return (
@@ -41,13 +41,13 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden xl:block">
           <Button href="/contact">Book a Free Call</Button>
         </div>
 
         <button
           aria-label="Toggle menu"
-          className="inline-flex items-center justify-center rounded-lg border border-black/10 p-2 text-ink md:hidden"
+          className="inline-flex items-center justify-center rounded-lg border border-black/10 p-2 text-ink lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={20} /> : <Menu size={20} />}
@@ -55,7 +55,7 @@ export default function Navbar() {
       </Container>
 
       {open && (
-        <div className="border-t border-black/5 bg-white md:hidden">
+        <div className="border-t border-black/5 bg-white lg:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <Link

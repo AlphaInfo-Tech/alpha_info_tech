@@ -273,6 +273,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/our-model", label: "Our Model" },
   { href: "/social-media-solutions", label: "Social Media Solutions" },
+  { href: "/voice-form-filler", label: "Fill by Kural" },
   { href: "/founder-message", label: "Vision" },
   { href: "/contact", label: "Contact" },
 ];
@@ -507,5 +508,160 @@ export const socialMedia = {
     "Easy to use",
     "Scalable as your business grows",
     "Local support",
+  ],
+};
+
+export const voiceFormFiller = {
+  eyebrow: "Voice Form Filler · Chrome Extension",
+  title: "Fill web forms by speaking on your phone",
+  languages: "In Tamil, English or Tanglish.",
+  intro:
+    "Voice Form Filler reads the form on your computer and shows a QR code. Scan it with your phone, tap the mic and say the answers. They appear in the form on your computer as you speak. Photos and documents go in from your phone's camera, already resized to the site's rules.",
+  tagline: "No profiles to set up, no text to paste, nothing to type.",
+  accountNote:
+    "You need an account from your administrator (phone number and PIN) to sign in.",
+
+  steps: [
+    {
+      title: "Scan the form",
+      description: "Open a web form, click the extension and choose “Scan form on this page”.",
+    },
+    {
+      title: "Scan the QR code",
+      description:
+        "Scan the QR code with your phone. It opens in the phone's browser; there is no app to install.",
+    },
+    {
+      title: "Tap the mic and speak",
+      description: "“My name is Saurav, phone 98765 43210, district Salem.”",
+    },
+    {
+      title: "Press “Fill form” once",
+      description:
+        "After that, new answers fill the page automatically and each changed field is highlighted.",
+    },
+    {
+      title: "Check and submit",
+      description:
+        "Check the form and submit it yourself. Undo puts the page back the way it was.",
+    },
+  ],
+
+  speakNaturally: [
+    {
+      text: "Tamil, English or Tanglish, even mixed in one sentence.",
+      examples: ["en peru Saurav, ooru Chennai"],
+    },
+    {
+      text: "Say numbers in pieces.",
+      examples: ["nine eight seven six…", "98765 – 43210"],
+    },
+    {
+      text: "Spell names letter by letter, including Tamil letter names.",
+      examples: ["S A U R A V → Saurav"],
+    },
+    {
+      text: "Correct yourself naturally.",
+      examples: ["no, not Sourav, Saurav", "the last digit is 5", "pincode la 455 illa 445"],
+    },
+    {
+      text: "Voice commands.",
+      examples: ["start over", "send it", "what is left?"],
+    },
+    {
+      text: "Speak as long as you need. Long answers are split and joined again, so nothing is lost.",
+    },
+    {
+      text: "Values are filled in English, even when you speak Tamil.",
+    },
+  ],
+
+  realWorldForms: [
+    {
+      key: "dependent",
+      title: "Dependent dropdowns",
+      description:
+        "State → District → Taluk → Village. It waits for each list to load and picks the option you said.",
+    },
+    {
+      key: "spelling",
+      title: "Spelling variants",
+      description:
+        "“Omaloor” or “Omalur”, Tamil script or short forms. Unclear matches go to your phone as “Did you mean…?” buttons and are never guessed silently.",
+    },
+    {
+      key: "custom",
+      title: "Custom dropdowns",
+      description:
+        "react-select, MUI, choices.js, select2 and standard accessible comboboxes.",
+    },
+    {
+      key: "frameworks",
+      title: "React, Vue, Angular & HTML",
+      description:
+        "Values are entered the way a person types, so the site's own checks still run.",
+    },
+    {
+      key: "multistep",
+      title: "Multi-step forms",
+      description:
+        "Fields that appear on step 2, or after ticking “Other”, show up on your phone right away.",
+    },
+    {
+      key: "frames",
+      title: "Frames & shadow DOM",
+      description: "Forms inside frames and shadow DOM on the same site.",
+    },
+  ],
+
+  uploads: {
+    intro: "Upload fields are filled from the phone's camera, not by voice.",
+    items: [
+      "The extension reads the site's rules (“JPG only, below 50 KB”, exact pixel size, page limits).",
+      "Take a photo or choose a file, then rotate, crop or add more pages.",
+      "Your phone converts it to fit: a compressed JPG, or several photos combined into one A4 PDF.",
+      "The file goes into the website's own upload field, so the site checks it normally. If the site rejects it, your phone tells you why.",
+      "Location and camera details (EXIF/GPS) are removed from photos.",
+    ],
+  },
+
+  severalForms: [
+    "Fill up to 5 forms at once, one per browser tab, each with its own QR code and phone.",
+    "The popup always shows the form in the tab you opened it on.",
+    "“Start over” clears the answers for the next applicant on the same QR code, useful at service centres and help desks.",
+  ],
+
+  phoneLanguage: [
+    "Switch the whole phone screen between தமிழ் and English.",
+    "Field labels show both: “தந்தை பெயர் · Father's name”.",
+    "Clear messages for a blocked microphone, a lost connection, an expired QR code and required fields still empty.",
+  ],
+
+  audience: [
+    "Citizen service centre operators filling applications for many people a day",
+    "Office staff doing repetitive data entry",
+    "Anyone who finds typing slow, or is more comfortable speaking Tamil than typing English",
+    "Help desks taking details over the counter",
+  ],
+
+  privacy: [
+    "Voice is sent for transcription and is not stored.",
+    "Spoken answers and their text are deleted automatically within about an hour.",
+    "Form session records (page address and field labels) are deleted after 30 days.",
+    "Uploaded photos and PDFs are stored privately and deleted as soon as the computer receives them, or when the tab closes.",
+    "QR codes work once and expire after 10 minutes. A phone link lasts 30 minutes.",
+    "The extension never submits a form for you. You review and submit.",
+    "Your data is not sold, not used for advertising and not used for anything except filling your form.",
+  ],
+
+  requirements: [
+    "An account from your administrator (phone number and PIN)",
+    "A phone with a browser and a microphone",
+    "Chrome on the computer with the form",
+  ],
+
+  notSupported: [
+    "Upload fields inside another website's embedded frame",
+    "Saving your details to reuse on future forms",
   ],
 };
