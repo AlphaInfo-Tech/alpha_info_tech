@@ -273,7 +273,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/our-model", label: "Our Model" },
   { href: "/social-media-solutions", label: "Social Media Solutions" },
-  { href: "/voice-form-filler", label: "Fill by Kural" },
+  { href: "/fill-by-kural", label: "Fill by Kural" },
   { href: "/founder-message", label: "Vision" },
   { href: "/contact", label: "Contact" },
 ];
@@ -511,12 +511,12 @@ export const socialMedia = {
   ],
 };
 
-export const voiceFormFiller = {
-  eyebrow: "Voice Form Filler · Chrome Extension",
+export const fillByKural = {
+  eyebrow: "Fill by Kural · Chrome Extension",
   title: "Fill web forms by speaking on your phone",
   languages: "In Tamil, English or Tanglish.",
   intro:
-    "Voice Form Filler reads the form on your computer and shows a QR code. Scan it with your phone, tap the mic and say the answers. They appear in the form on your computer as you speak. Photos and documents go in from your phone's camera, already resized to the site's rules.",
+    "Fill by Kural reads the form on your computer and shows a QR code. Scan it with your phone, tap the mic and say the answers. They appear in the form on your computer as you speak. Photos and documents go in from your phone's camera, already resized to the site's rules.",
   tagline: "No profiles to set up, no text to paste, nothing to type.",
   accountNote:
     "You need an account from your administrator (phone number and PIN) to sign in.",
