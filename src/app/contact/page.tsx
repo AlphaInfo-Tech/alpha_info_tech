@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone, Clock, MessageCircle } from "lucide-react";
 import Container from "@/components/Container";
 import ContactForm from "@/components/ContactForm";
 import { company } from "@/lib/content";
@@ -22,6 +22,12 @@ const infoItems = [
     label: "Phone",
     value: company.phones.join(" / "),
     href: `tel:${company.phones[0].replace(/\s+/g, "")}`,
+  },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: company.whatsapp,
+    href: `https://wa.me/${company.whatsapp.replace(/\D/g, "")}`,
   },
   {
     icon: Clock,
@@ -73,6 +79,10 @@ export default function ContactPage() {
                       {item.href ? (
                         <a
                           href={item.href}
+                          {...(item.href.startsWith("http") && {
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                          })}
                           className="text-base font-medium text-ink hover:text-brand-600"
                         >
                           {item.value}

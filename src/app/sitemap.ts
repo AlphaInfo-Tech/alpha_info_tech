@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/our-model",
     "/fill-by-kural",
+    "/request-access",
     "/founder-message",
     "/contact",
     "/privacy-policy",

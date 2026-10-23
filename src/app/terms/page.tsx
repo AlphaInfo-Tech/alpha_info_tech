@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms & Conditions" updated="19 July 2026">
+    <LegalLayout title="Terms & Conditions" updated="24 October 2026">
       <p>
         These Terms & Conditions govern your use of the {company.name}{" "}
         website and any services you engage us for. By using our website or
@@ -64,20 +64,47 @@ export default function TermsPage() {
         subject to their respective terms of service.
       </p>
 
-      <h2>7. Changes to These Terms</h2>
+      <h2>7. Fill by Kural</h2>
+      <ul>
+        <li>
+          <strong>Accounts:</strong> Fill by Kural accounts are created by our
+          team on request. Keep your PIN private; you are responsible for
+          activity under your account. We may suspend accounts that are
+          misused.
+        </li>
+        <li>
+          <strong>Independent tool:</strong> Fill by Kural is not affiliated
+          with any government department or service. It works on government
+          and private websites, and those websites&apos; own terms continue to
+          apply when you use them.
+        </li>
+        <li>
+          <strong>You review and submit:</strong> the extension fills fields
+          but never submits a form for you. Speech recognition can make
+          mistakes, so check every value before you submit. You are
+          responsible for what you submit.
+        </li>
+        <li>
+          <strong>Other people&apos;s details:</strong> if you fill forms on
+          behalf of other people, for example at a service centre, you are
+          responsible for having their permission to use their details.
+        </li>
+      </ul>
+
+      <h2>8. Changes to These Terms</h2>
       <p>
         We may revise these Terms & Conditions from time to time. Continued
         use of our website or services after changes are posted constitutes
         acceptance of the updated terms.
       </p>
 
-      <h2>8. Governing Law</h2>
+      <h2>9. Governing Law</h2>
       <p>
         These terms are governed by the laws of India, and any disputes will
         be subject to the jurisdiction of the courts in Tamil Nadu.
       </p>
 
-      <h2>9. Contact Us</h2>
+      <h2>10. Contact Us</h2>
       <p>
         Questions about these terms can be sent to{" "}
         <a href={`mailto:${company.email}`}>{company.email}</a> or{" "}

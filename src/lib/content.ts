@@ -4,8 +4,9 @@ export const company = {
   tagline: "Simple Digital Solutions for Growing Businesses",
   statement: "Not just software, it will be your solution.",
   motto: "Building Sustainable Solutions",
-  email: "alphainfotech@gmail.com",
+  email: "alphainfotecherode@gmail.com",
   phones: ["+91 99943 12900", "+91 93446 89836"],
+  whatsapp: "+91 99943 12900",
   address: "Erode, Tamil Nadu, India",
   responseTime: "We get back to you within 24 hours.",
 };
@@ -663,5 +664,28 @@ export const fillByKural = {
   notSupported: [
     "Upload fields inside another website's embedded frame",
     "Saving your details to reuse on future forms",
+  ],
+};
+
+export const requestAccess = {
+  eyebrow: "Request Access",
+  title: "Get Fill by Kural for your centre",
+  lead: "Fill web forms by speaking Tamil or English on your phone.",
+  leadTamil: "குரலால் படிவங்களை நிரப்புங்கள்.",
+  intro:
+    "Fill by Kural accounts are set up by our team, so every user gets a sign-in that works from day one. Send the form below and we'll contact you on your mobile (WhatsApp) number within 2 working days.",
+  // Chrome Web Store listing. Leave empty until the extension is published.
+  storeUrl: "",
+
+  whoCanRequest: [
+    "Service centre and CSC operators filling applications for citizens",
+    "Office and business staff doing repeated data entry",
+    "Anyone who wants to fill their own forms by voice",
+  ],
+
+  requirements: [
+    "Chrome on the computer with the form",
+    "A phone with a browser and a microphone (no app to install)",
+    "An internet connection on both",
   ],
 };

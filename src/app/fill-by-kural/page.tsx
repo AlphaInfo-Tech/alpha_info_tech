@@ -120,7 +120,7 @@ export default function FillByKuralPage() {
               {fillByKural.tagline}
             </p>
             <div className="mt-8 flex justify-center">
-              <Button href="/contact">Request an Account</Button>
+              <Button href="/request-access">Request Access</Button>
             </div>
             <p className="mt-6 flex items-start justify-center gap-2 text-sm text-slate-400">
               <KeyRound size={16} className="mt-0.5 shrink-0 text-brand-400" />
@@ -400,10 +400,15 @@ export default function FillByKuralPage() {
             Stop typing. Start speaking.
           </h2>
           <p className="max-w-xl text-base leading-relaxed text-slate-400">
-            Need an account, or help getting set up? Get in touch and
-            we&apos;ll have you filling forms by voice in minutes.
+            Request an account and we&apos;ll contact you within 2 working
+            days with your sign-in. Questions first? Get in touch.
           </p>
-          <Button href="/contact">Get Help &amp; an Account</Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button href="/request-access">Request Access</Button>
+            <Button href="/contact" variant="secondary">
+              Contact Us
+            </Button>
+          </div>
         </Container>
       </section>
     </>
