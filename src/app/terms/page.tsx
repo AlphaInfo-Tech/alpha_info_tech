@@ -64,16 +64,16 @@ export default function TermsPage() {
         subject to their respective terms of service.
       </p>
 
-      <h2>7. Fill by Kural</h2>
+      <h2>7. Voice2Fill</h2>
       <ul>
         <li>
-          <strong>Accounts:</strong> Fill by Kural accounts are created by our
+          <strong>Accounts:</strong> Voice2Fill accounts are created by our
           team on request. Keep your PIN private; you are responsible for
           activity under your account. We may suspend accounts that are
           misused.
         </li>
         <li>
-          <strong>Independent tool:</strong> Fill by Kural is not affiliated
+          <strong>Independent tool:</strong> Voice2Fill is not affiliated
           with any government department or service. It works on government
           and private websites, and those websites&apos; own terms continue to
           apply when you use them.

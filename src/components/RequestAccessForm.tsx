@@ -10,7 +10,7 @@ type FieldName = "full_name" | "phone" | "email" | "user_type" | "consent";
 
 const T = {
   en: {
-    title: "Request access to Fill by Kural",
+    title: "Request access to Voice2Fill",
     sub: "Accounts are created by our team. Tell us who you are and we'll set up your sign-in.",
     name: "Full name",
     phone: "Mobile (WhatsApp) number",
@@ -44,7 +44,7 @@ const T = {
       "We'll contact you on your mobile (WhatsApp) number within 2 working days with your sign-in details.",
   },
   ta: {
-    title: "Fill by Kural பயன்படுத்த அனுமதி கோருங்கள்",
+    title: "Voice2Fill பயன்படுத்த அனுமதி கோருங்கள்",
     sub: "கணக்குகளை எங்கள் குழு உருவாக்குகிறது. உங்கள் விவரங்களைத் தாருங்கள்; உள்நுழைவை அமைத்துத் தருகிறோம்.",
     name: "முழுப் பெயர்",
     phone: "கைபேசி (WhatsApp) எண்",

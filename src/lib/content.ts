@@ -274,7 +274,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/our-model", label: "Our Model" },
   { href: "/social-media-solutions", label: "Social Media Solutions" },
-  { href: "/fill-by-kural", label: "Fill by Kural" },
+  { href: "/voice2fill", label: "Voice2Fill" },
   { href: "/founder-message", label: "Vision" },
   { href: "/contact", label: "Contact" },
 ];
@@ -512,12 +512,12 @@ export const socialMedia = {
   ],
 };
 
-export const fillByKural = {
-  eyebrow: "Fill by Kural · Chrome Extension",
+export const voice2Fill = {
+  eyebrow: "Voice2Fill · Chrome Extension",
   title: "Fill web forms by speaking on your phone",
   languages: "In Tamil, English or Tanglish.",
   intro:
-    "Fill by Kural reads the form on your computer and shows a QR code. Scan it with your phone, tap the mic and say the answers. They appear in the form on your computer as you speak. Photos and documents go in from your phone's camera, already resized to the site's rules.",
+    "Voice2Fill reads the form on your computer and shows a QR code. Scan it with your phone, tap the mic and say the answers. They appear in the form on your computer as you speak. Photos and documents go in from your phone's camera, already resized to the site's rules.",
   tagline: "No profiles to set up, no text to paste, nothing to type.",
   accountNote:
     "You need an account from your administrator (phone number and PIN) to sign in.",
@@ -669,11 +669,11 @@ export const fillByKural = {
 
 export const requestAccess = {
   eyebrow: "Request Access",
-  title: "Get Fill by Kural for your centre",
+  title: "Get Voice2Fill for your centre",
   lead: "Fill web forms by speaking Tamil or English on your phone.",
   leadTamil: "குரலால் படிவங்களை நிரப்புங்கள்.",
   intro:
-    "Fill by Kural accounts are set up by our team, so every user gets a sign-in that works from day one. Send the form below and we'll contact you on your mobile (WhatsApp) number within 2 working days.",
+    "Voice2Fill accounts are set up by our team, so every user gets a sign-in that works from day one. Send the form below and we'll contact you on your mobile (WhatsApp) number within 2 working days.",
   // Chrome Web Store listing. Leave empty until the extension is published.
   storeUrl: "",
 

@@ -8,9 +8,9 @@ import RequestAccessForm from "@/components/RequestAccessForm";
 import { company, requestAccess } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Request Access to Fill by Kural",
+  title: "Request Access to Voice2Fill",
   description:
-    "Request a Fill by Kural account for your service centre or office. Fill web forms by speaking Tamil or English on your phone.",
+    "Request a Voice2Fill account for your service centre or office. Fill web forms by speaking Tamil or English on your phone.",
 };
 
 const whatsappHref = `https://wa.me/${company.whatsapp.replace(/\D/g, "")}`;
@@ -58,7 +58,7 @@ const faqs = [
     q: "Is this a government service?",
     a: (
       <>
-        No. Fill by Kural is an independent tool and is not affiliated with any
+        No. Voice2Fill is an independent tool and is not affiliated with any
         government department or service. It works on government and private
         websites alike.
       </>
@@ -110,14 +110,14 @@ export default function RequestAccessPage() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="flex items-center justify-center gap-3">
               <Image
-                src="/fill-by-kural/icon-48.png"
+                src="/voice2fill/icon-48.png"
                 alt=""
                 width={36}
                 height={36}
                 className="rounded-lg"
               />
               <span className="font-label text-xs text-brand-400">
-                Fill by Kural · {requestAccess.eyebrow}
+                Voice2Fill · {requestAccess.eyebrow}
               </span>
             </div>
             <h1 className="font-heading mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -173,8 +173,8 @@ export default function RequestAccessPage() {
 
               <p className="border-t border-black/10 pt-10 text-sm text-ink-muted">
                 Want to see how it works first?{" "}
-                <Link href="/fill-by-kural" className="font-semibold text-brand-600 hover:text-brand-700">
-                  Take the Fill by Kural tour →
+                <Link href="/voice2fill" className="font-semibold text-brand-600 hover:text-brand-700">
+                  Take the Voice2Fill tour →
                 </Link>
               </p>
             </aside>

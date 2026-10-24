@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/our-model",
-    "/fill-by-kural",
+    "/voice2fill",
     "/request-access",
     "/founder-message",
     "/contact",

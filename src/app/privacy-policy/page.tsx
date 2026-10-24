@@ -36,8 +36,7 @@ export default function PrivacyPolicyPage() {
           automatically when you use our website.
         </li>
         <li>
-          <strong>Access requests.</strong> When you request access to Fill by
-          Kural, we collect your name, mobile (WhatsApp) number and, if you
+          <strong>Access requests.</strong> When you request access to Voice2Fill, we collect your name, mobile (WhatsApp) number and, if you
           give them, your email, organisation, district, expected forms per
           day and message. We use them only to review your request, create
           your account and contact you about it. Requests are stored in
@@ -61,7 +60,7 @@ export default function PrivacyPolicyPage() {
         We do not sell your personal information. We may share it with
         trusted service providers who help us operate (for example, email,
         hosting and database providers such as Supabase, or the speech
-        transcription service used by Fill by Kural) strictly to deliver our services, and only to the
+        transcription service used by Voice2Fill) strictly to deliver our services, and only to the
         extent necessary. We may also disclose information if required by
         law.
       </p>
@@ -75,9 +74,9 @@ export default function PrivacyPolicyPage() {
         us.
       </p>
 
-      <h2>5. Fill by Kural</h2>
+      <h2>5. Voice2Fill</h2>
       <p>
-        Fill by Kural is our Chrome extension for filling web forms by voice
+        Voice2Fill is our Chrome extension for filling web forms by voice
         from your phone. It handles your information as follows:
       </p>
       <ul>
@@ -111,7 +110,7 @@ export default function PrivacyPolicyPage() {
         </li>
       </ul>
       <p>
-        Fill by Kural data is not sold, not used for advertising and not used
+        Voice2Fill data is not sold, not used for advertising and not used
         for anything except filling your form.
       </p>
 

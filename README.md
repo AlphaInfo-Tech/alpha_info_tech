@@ -37,7 +37,7 @@ See [.env.example](.env.example). Required for the contact form to actually log 
 | Variable | Description |
 | --- | --- |
 | `GOOGLE_SHEET_SCRIPT_URL` | Deployed Google Apps Script Web App URL (ends in `/exec`) |
-| `SUPABASE_URL` | Supabase project URL, used by `/api/request-access` (Fill by Kural access requests) |
+| `SUPABASE_URL` | Supabase project URL, used by `/api/request-access` (Voice2Fill access requests) |
 | `SUPABASE_ANON_KEY` | Supabase public anon key; RLS on `access_requests` should only allow inserts |
 | `NEXT_PUBLIC_SITE_URL` | Public site URL, used in metadata/sitemap/robots |
 

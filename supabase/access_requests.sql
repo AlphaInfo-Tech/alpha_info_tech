@@ -1,4 +1,4 @@
--- Fill by Kural: access requests
+-- Voice2Fill: access requests
 -- Run once in Supabase: Dashboard → SQL Editor → New query → paste → Run.
 -- Stores submissions from the /request-access form (src/app/api/request-access/route.ts).
 
