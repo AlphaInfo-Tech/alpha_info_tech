@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import RequestAccessForm from "@/components/RequestAccessForm";
-import { company, requestAccess } from "@/lib/content";
+import { company, requestAccess, voice2Fill } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Request Access to Voice2Fill",
@@ -26,10 +26,10 @@ const steps = [
   },
   {
     title: "Install the extension",
-    body: requestAccess.storeUrl ? (
+    body: voice2Fill.storeUrl ? (
       <>
         from the{" "}
-        <a href={requestAccess.storeUrl} target="_blank" rel="noopener noreferrer" className="text-brand-600 underline underline-offset-2">
+        <a href={voice2Fill.storeUrl} target="_blank" rel="noopener noreferrer" className="text-brand-600 underline underline-offset-2">
           Chrome Web Store
         </a>
         .
@@ -70,7 +70,19 @@ const faqs = [
       <>
         We use your name and mobile number only to create your account and
         contact you about it. Requests that are not approved are deleted after
-        180 days. See the <Link href="/privacy-policy">privacy policy</Link>.
+        180 days. See the <Link href="/voice2fill/privacy">privacy policy</Link>.
+      </>
+    ),
+  },
+  {
+    q: "How much does it cost?",
+    a: (
+      <>
+        New accounts start with a free 7-day trial with 15 voice minutes. After
+        that, monthly plans start at ₹99 for 60 voice minutes. Only recording
+        time counts; scanning and filling forms is free. See the{" "}
+        <Link href="/voice2fill#plans">plans</Link> and the{" "}
+        <Link href="/voice2fill/terms">payment and refund terms</Link>.
       </>
     ),
   },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LegalLayout from "@/components/LegalLayout";
 import { company } from "@/lib/content";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms & Conditions" updated="24 October 2026">
+    <LegalLayout title="Terms & Conditions" updated="27 October 2026">
       <p>
         These Terms & Conditions govern your use of the {company.name}{" "}
         website and any services you engage us for. By using our website or
@@ -88,6 +89,11 @@ export default function TermsPage() {
           <strong>Other people&apos;s details:</strong> if you fill forms on
           behalf of other people, for example at a service centre, you are
           responsible for having their permission to use their details.
+        </li>
+        <li>
+          <strong>Plans, payments and refunds:</strong> see the{" "}
+          <Link href="/voice2fill/terms">Voice2Fill terms</Link>, which apply
+          in addition to these.
         </li>
       </ul>
 

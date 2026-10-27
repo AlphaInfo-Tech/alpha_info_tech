@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LegalLayout from "@/components/LegalLayout";
 import { company } from "@/lib/content";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalLayout title="Privacy Policy" updated="24 October 2026">
+    <LegalLayout title="Privacy Policy" updated="27 October 2026">
       <p>
         {company.name} (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;)
         respects your privacy and is committed to protecting the personal
@@ -58,10 +59,11 @@ export default function PrivacyPolicyPage() {
       <h2>3. How We Share Information</h2>
       <p>
         We do not sell your personal information. We may share it with
-        trusted service providers who help us operate (for example, email,
-        hosting and database providers such as Supabase, or the speech
-        transcription service used by Voice2Fill) strictly to deliver our services, and only to the
-        extent necessary. We may also disclose information if required by
+        trusted service providers who help us operate (for example, email and
+        hosting providers, and for Voice2Fill: Sarvam AI for speech to text,
+        OpenAI for reading forms, Supabase for the database and file storage,
+        and Vercel for hosting) strictly to deliver our services, and only to
+        the extent necessary. We may also disclose information if required by
         law.
       </p>
 
@@ -76,42 +78,12 @@ export default function PrivacyPolicyPage() {
 
       <h2>5. Voice2Fill</h2>
       <p>
-        Voice2Fill is our Chrome extension for filling web forms by voice
-        from your phone. It handles your information as follows:
-      </p>
-      <ul>
-        <li>
-          <strong>Your account:</strong> your name and mobile number are used
-          to sign you in and to contact you about your account.
-        </li>
-        <li>
-          <strong>Voice:</strong> sent for transcription and not stored.
-        </li>
-        <li>
-          <strong>Spoken answers:</strong> the answers and their text are
-          deleted automatically within about an hour.
-        </li>
-        <li>
-          <strong>Form sessions:</strong> records of the page address and
-          field labels are deleted after 30 days.
-        </li>
-        <li>
-          <strong>Photos and documents:</strong> stored privately and deleted
-          as soon as your computer receives them, or when the tab closes.
-          Location and camera details (EXIF/GPS) are removed from photos.
-        </li>
-        <li>
-          <strong>Pairing links:</strong> QR codes work once and expire after
-          10 minutes. A phone link lasts 30 minutes.
-        </li>
-        <li>
-          <strong>Submitting:</strong> the extension never submits a form for
-          you. You review and submit it yourself.
-        </li>
-      </ul>
-      <p>
-        Voice2Fill data is not sold, not used for advertising and not used
-        for anything except filling your form.
+        Voice2Fill is our Chrome extension for filling web forms by voice from
+        your phone. Voice recordings are never stored, spoken answers are
+        deleted within about an hour, and uploaded files are deleted as soon as
+        the computer receives them. The full details, including what the
+        extension collects, who processes it and how long it is kept, are in
+        the <Link href="/voice2fill/privacy">Voice2Fill privacy policy</Link>.
       </p>
 
       <h2>6. Cookies</h2>

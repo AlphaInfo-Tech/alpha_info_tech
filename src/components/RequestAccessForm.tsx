@@ -407,7 +407,7 @@ export default function RequestAccessForm() {
               <span>
                 {t.consent}{" "}
                 <Link
-                  href="/privacy-policy"
+                  href="/voice2fill/privacy"
                   target="_blank"
                   className="text-brand-600 underline underline-offset-2"
                 >

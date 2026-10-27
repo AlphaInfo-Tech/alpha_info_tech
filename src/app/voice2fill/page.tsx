@@ -119,8 +119,16 @@ export default function Voice2FillPage() {
             <p className="mt-4 text-base font-medium text-white">
               {voice2Fill.tagline}
             </p>
-            <div className="mt-8 flex justify-center">
-              <Button href="/request-access">Request Access</Button>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              {voice2Fill.storeUrl && (
+                <Button href={voice2Fill.storeUrl}>Add to Chrome</Button>
+              )}
+              <Button
+                href="/request-access"
+                variant={voice2Fill.storeUrl ? "secondary" : "primary"}
+              >
+                Request Access
+              </Button>
             </div>
             <p className="mt-6 flex items-start justify-center gap-2 text-sm text-slate-400">
               <KeyRound size={16} className="mt-0.5 shrink-0 text-brand-400" />
@@ -329,6 +337,45 @@ export default function Voice2FillPage() {
         </Container>
       </section>
 
+      <section id="plans" className="scroll-mt-24 bg-white py-24">
+        <Container>
+          <SectionHeading
+            eyebrow="Plans"
+            title="Start free, then pay for the minutes you use"
+            description="Only the time the microphone is recording counts. Scanning forms, filling them, photos and uploads are free."
+            align="center"
+          />
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {voice2Fill.plans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`card-notch rounded-xl border p-6 ${
+                  plan.price === "Free"
+                    ? "border-accent-500 bg-surface"
+                    : "border-black/10"
+                }`}
+              >
+                <span className="font-label text-xs text-brand-600">{plan.name}</span>
+                <p className="font-heading mt-3 text-3xl font-bold text-ink">{plan.price}</p>
+                <p className="mt-3 text-sm font-medium text-ink">
+                  {plan.minutes} voice minutes
+                </p>
+                <p className="mt-1 text-sm text-ink-muted">{plan.duration}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-10 text-center text-sm text-ink-muted">
+            Pay by UPI or bank transfer. Plans don&apos;t renew automatically.{" "}
+            <Link href="/voice2fill/terms" className="font-semibold text-brand-600 hover:text-brand-700">
+              Plans, payments &amp; refunds →
+            </Link>
+          </p>
+          <div className="mt-8 flex justify-center">
+            <Button href="/request-access">Start the Free Trial</Button>
+          </div>
+        </Container>
+      </section>
+
       <section className="bg-navy py-24">
         <Container className="max-w-4xl">
           <div className="mx-auto max-w-2xl text-center">
@@ -350,8 +397,8 @@ export default function Voice2FillPage() {
           </ul>
           <p className="mt-8 text-center text-sm text-slate-400">
             Read the full{" "}
-            <Link href="/privacy-policy" className="text-white underline underline-offset-4 hover:text-accent-400">
-              privacy policy
+            <Link href="/voice2fill/privacy" className="text-white underline underline-offset-4 hover:text-accent-400">
+              Voice2Fill privacy policy
             </Link>
             .
           </p>
@@ -384,6 +431,25 @@ export default function Voice2FillPage() {
               </ul>
             </div>
           </div>
+          <nav
+            aria-label="Voice2Fill"
+            className="mt-12 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm"
+          >
+            {[
+              { href: "/voice2fill/privacy", label: "Privacy policy" },
+              { href: "/voice2fill/terms", label: "Terms & plans" },
+              { href: "/voice2fill/support", label: "Support" },
+              { href: "/request-access", label: "Request access" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-medium text-brand-600 hover:text-brand-700"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </Container>
       </section>
 

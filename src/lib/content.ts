@@ -520,7 +520,19 @@ export const voice2Fill = {
     "Voice2Fill reads the form on your computer and shows a QR code. Scan it with your phone, tap the mic and say the answers. They appear in the form on your computer as you speak. Photos and documents go in from your phone's camera, already resized to the site's rules.",
   tagline: "No profiles to set up, no text to paste, nothing to type.",
   accountNote:
-    "You need an account from your administrator (phone number and PIN) to sign in.",
+    "You need a Voice2Fill account (phone number and PIN) to sign in. New accounts start with a free 7-day trial.",
+  // Chrome Web Store listing. Leave empty until the extension is published.
+  storeUrl: "",
+
+  // Keep in step with Admin → Plans in the Voice2Fill admin panel.
+  plans: [
+    { name: "Trial", price: "Free", minutes: "15", duration: "7 days (once per person)" },
+    { name: "Starter", price: "₹99", minutes: "60", duration: "30 days" },
+    { name: "Basic", price: "₹249", minutes: "150", duration: "30 days" },
+    { name: "Pro", price: "₹649", minutes: "400", duration: "30 days" },
+    { name: "Business", price: "₹1,949", minutes: "1,200", duration: "30 days" },
+    { name: "Extra minutes", price: "₹79", minutes: "50", duration: "Until the current plan ends" },
+  ],
 
   steps: [
     {
@@ -650,13 +662,14 @@ export const voice2Fill = {
     "Spoken answers and their text are deleted automatically within about an hour.",
     "Form session records (page address and field labels) are deleted after 30 days.",
     "Uploaded photos and PDFs are stored privately and deleted as soon as the computer receives them, or when the tab closes.",
+    "Photos and documents are never sent to the AI services.",
     "QR codes work once and expire after 10 minutes. A phone link lasts 30 minutes.",
     "The extension never submits a form for you. You review and submit.",
     "Your data is not sold, not used for advertising and not used for anything except filling your form.",
   ],
 
   requirements: [
-    "An account from your administrator (phone number and PIN)",
+    "A Voice2Fill account (phone number and PIN; free trial for new accounts)",
     "A phone with a browser and a microphone",
     "Chrome on the computer with the form",
   ],
@@ -673,9 +686,7 @@ export const requestAccess = {
   lead: "Fill web forms by speaking Tamil or English on your phone.",
   leadTamil: "குரலால் படிவங்களை நிரப்புங்கள்.",
   intro:
-    "Voice2Fill accounts are set up by our team, so every user gets a sign-in that works from day one. Send the form below and we'll contact you on your mobile (WhatsApp) number within 2 working days.",
-  // Chrome Web Store listing. Leave empty until the extension is published.
-  storeUrl: "",
+    "Voice2Fill accounts are set up by our team, so every user gets a sign-in that works from day one. New accounts start with a free 7-day trial (15 voice minutes). Send the form below and we'll contact you on your mobile (WhatsApp) number within 2 working days.",
 
   whoCanRequest: [
     "Service centre and CSC operators filling applications for citizens",
