@@ -530,9 +530,9 @@ export const voice2Fill = {
   plans: [
     { key: "trial", name: "Trial", price: "Free", amountPaise: 0, minutes: "15", duration: "7 days (once per person)", razorpayButtonId: "" },
     { key: "starter", name: "Starter", price: "₹99", amountPaise: 9900, minutes: "60", duration: "30 days", razorpayButtonId: "pl_Ttnh64CinRbJD9" },
-    { key: "basic", name: "Basic", price: "₹249", amountPaise: 24900, minutes: "150", duration: "30 days", razorpayButtonId: "" },
-    { key: "pro", name: "Pro", price: "₹649", amountPaise: 64900, minutes: "400", duration: "30 days", razorpayButtonId: "" },
-    { key: "business", name: "Business", price: "₹1,949", amountPaise: 194900, minutes: "1,200", duration: "30 days", razorpayButtonId: "" },
+    { key: "basic", name: "Basic", price: "₹249", amountPaise: 24900, minutes: "150", duration: "30 days", razorpayButtonId: "pl_Tto3Urj1Rfw7us" },
+    { key: "pro", name: "Pro", price: "₹649", amountPaise: 64900, minutes: "400", duration: "30 days", razorpayButtonId: "pl_Tto7qkM3q2Meed" },
+    { key: "business", name: "Business", price: "₹1,949", amountPaise: 194900, minutes: "1,200", duration: "30 days", razorpayButtonId: "pl_Tto9ePtW42sbIs" },
     { key: "topup", name: "Extra minutes", price: "₹79", amountPaise: 7900, minutes: "50", duration: "Until the current plan ends", razorpayButtonId: "" },
   ],
 
