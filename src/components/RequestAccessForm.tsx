@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { FormEvent, ReactNode, useRef, useState } from "react";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { isMobile, normPhone } from "@/lib/phone";
 
 type Lang = "en" | "ta";
 type AlertKey = "errDup" | "errNet" | "errServer";
@@ -94,13 +95,6 @@ function borderFor(invalid?: boolean) {
   return invalid ? "border-red-500" : "border-black/10";
 }
 
-function normPhone(v: string) {
-  let d = v.replace(/\D/g, "");
-  if (d.length === 12 && d.startsWith("91")) d = d.slice(2);
-  if (d.length === 11 && d.startsWith("0")) d = d.slice(1);
-  return d;
-}
-
 function Label({
   htmlFor,
   children,
@@ -160,7 +154,7 @@ export default function RequestAccessForm() {
 
     const nextErrors = {
       full_name: data.full_name.length < 2,
-      phone: !/^[6-9]\d{9}$/.test(data.phone),
+      phone: !isMobile(data.phone),
       email: !!data.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email),
       user_type: !data.user_type,
       consent: !data.consent,

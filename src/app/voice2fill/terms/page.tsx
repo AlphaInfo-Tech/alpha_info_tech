@@ -73,9 +73,11 @@ export default function Voice2FillTermsPage() {
       <h2>3. Paying and renewing</h2>
       <ul>
         <li>
-          Pay by UPI or bank transfer to the details we give you, then send us
-          the payment reference. Your plan starts when we have confirmed the
-          payment.
+          Pay online on the <Link href="/voice2fill/plans">plans page</Link>{" "}
+          through Razorpay (UPI, cards, netbanking or wallets), entering your
+          Voice2Fill mobile number at checkout. You can also pay by UPI or bank
+          transfer to the details we give you, then send us the payment
+          reference. Your plan starts when we have confirmed the payment.
         </li>
         <li>
           If you renew early, the new plan starts when the current one ends, so

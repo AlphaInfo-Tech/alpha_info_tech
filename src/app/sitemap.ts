@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/our-model",
     "/voice2fill",
+    "/voice2fill/plans",
     "/voice2fill/privacy",
     "/voice2fill/terms",
     "/voice2fill/support",

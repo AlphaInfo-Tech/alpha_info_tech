@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ReactNode } from "react";
 import LegalLayout from "@/components/LegalLayout";
-import { company } from "@/lib/content";
+import { company, voice2Fill } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Voice2Fill Support",
@@ -174,6 +174,30 @@ const groups: { title: string; items: { q: string; a: ReactNode }[] }[] = [
             <Link href="/voice2fill/terms">plans, payments and refunds</Link>.
           </>
         ),
+      },
+      {
+        q: "How do I renew, upgrade or buy extra minutes?",
+        a: (
+          <>
+            Click <strong>Renew</strong> in the extension popup, or open the{" "}
+            <Link href="/voice2fill/plans">plans page</Link>. Pay through
+            Razorpay and enter your Voice2Fill mobile number at checkout.
+          </>
+        ),
+      },
+      {
+        q: "I paid but my plan hasn't changed",
+        a: (
+          <>
+            We switch plans on {voice2Fill.payment.activationTime} and confirm
+            on WhatsApp. Then close and reopen the extension popup. If it&apos;s
+            taking longer, send us the payment ID from your Razorpay receipt.
+          </>
+        ),
+      },
+      {
+        q: "I typed the wrong mobile number at checkout",
+        a: "Message us with the payment ID and your Voice2Fill mobile number, and we'll add the plan to the right account.",
       },
     ],
   },

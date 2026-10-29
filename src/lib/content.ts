@@ -525,14 +525,20 @@ export const voice2Fill = {
   storeUrl: "",
 
   // Keep in step with Admin → Plans in the Voice2Fill admin panel.
+  // amountPaise must match the Razorpay button amount: the webhook uses it to
+  // tell which plan was bought. razorpayButtonId is the button's "pl_…" id.
   plans: [
-    { name: "Trial", price: "Free", minutes: "15", duration: "7 days (once per person)" },
-    { name: "Starter", price: "₹99", minutes: "60", duration: "30 days" },
-    { name: "Basic", price: "₹249", minutes: "150", duration: "30 days" },
-    { name: "Pro", price: "₹649", minutes: "400", duration: "30 days" },
-    { name: "Business", price: "₹1,949", minutes: "1,200", duration: "30 days" },
-    { name: "Extra minutes", price: "₹79", minutes: "50", duration: "Until the current plan ends" },
+    { key: "trial", name: "Trial", price: "Free", amountPaise: 0, minutes: "15", duration: "7 days (once per person)", razorpayButtonId: "" },
+    { key: "starter", name: "Starter", price: "₹99", amountPaise: 9900, minutes: "60", duration: "30 days", razorpayButtonId: "pl_Ttnh64CinRbJD9" },
+    { key: "basic", name: "Basic", price: "₹249", amountPaise: 24900, minutes: "150", duration: "30 days", razorpayButtonId: "" },
+    { key: "pro", name: "Pro", price: "₹649", amountPaise: 64900, minutes: "400", duration: "30 days", razorpayButtonId: "" },
+    { key: "business", name: "Business", price: "₹1,949", amountPaise: 194900, minutes: "1,200", duration: "30 days", razorpayButtonId: "" },
+    { key: "topup", name: "Extra minutes", price: "₹79", amountPaise: 7900, minutes: "50", duration: "Until the current plan ends", razorpayButtonId: "" },
   ],
+
+  payment: {
+    activationTime: "usually within 2 hours (9 am – 9 pm)",
+  },
 
   steps: [
     {

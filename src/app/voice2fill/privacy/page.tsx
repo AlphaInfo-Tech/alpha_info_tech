@@ -107,7 +107,7 @@ export default function Voice2FillPrivacyPage() {
           [
             <><strong>Plan and payment records</strong>: your plan, its dates and minutes, and each payment&apos;s amount, date, method and reference (for example a UPI transaction id)</>,
             "When you get or renew a plan, or buy extra minutes",
-            "To know which plan you paid for, and for our accounts. We never receive or store card numbers, UPI PINs or bank passwords.",
+            "To know which plan you paid for, and for our accounts. For online payments, Razorpay sends us the payment ID, amount, method, and the phone, email and Voice2Fill mobile number you entered at checkout. We never receive or store card numbers, UPI PINs or bank passwords.",
           ],
         ]}
       />
@@ -147,6 +147,11 @@ export default function Voice2FillPrivacyPage() {
             <strong key="vercel">Vercel</strong>,
             "All requests to our server, in transit",
             "Hosts the server and the phone page",
+          ],
+          [
+            <strong key="razorpay">Razorpay</strong>,
+            "The payment details you enter at checkout",
+            "Processes online payments for plans and extra minutes",
           ],
         ]}
       />

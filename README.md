@@ -39,6 +39,8 @@ See [.env.example](.env.example). Required for the contact form to actually log 
 | `GOOGLE_SHEET_SCRIPT_URL` | Deployed Google Apps Script Web App URL (ends in `/exec`) |
 | `SUPABASE_URL` | Supabase project URL, used by `/api/request-access` (Voice2Fill access requests) |
 | `SUPABASE_ANON_KEY` | Supabase public anon key; RLS on `access_requests` should only allow inserts |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key, **server only** (never `NEXT_PUBLIC_`). Used by `/api/razorpay/webhook` to write `voice2fill_payments` |
+| `RAZORPAY_WEBHOOK_SECRET` | Secret set on the Razorpay webhook (Dashboard → Webhooks, event `payment.captured`, URL `/api/razorpay/webhook`) |
 | `NEXT_PUBLIC_SITE_URL` | Public site URL, used in metadata/sitemap/robots |
 
 ### Setting up the Google Sheet + Apps Script
