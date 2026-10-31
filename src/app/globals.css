@@ -29,6 +29,16 @@
   --color-ink-muted: #7a7a7a;
   --color-navy: #0b1220;
   --color-navy-dim: #141b2b;
+
+  /* Voice2Fill product colours — used on the Voice2Fill page only */
+  --color-v2f-blue: #1e4e9c;
+  --color-v2f-blue-soft: #dce8fb;
+  --color-v2f-gold: #ebc865;
+  --color-v2f-page: #faf9f7;
+  --color-v2f-warn: #f9e2b0;
+  --color-v2f-warn-ink: #7a5000;
+  --color-v2f-ok: #d7f0d9;
+  --color-v2f-ok-ink: #1f6b2a;
 }
 
 @theme inline {
@@ -60,16 +70,25 @@
   --color-ink-muted: var(--color-ink-muted);
   --color-navy: var(--color-navy);
   --color-navy-dim: var(--color-navy-dim);
+
+  --color-v2f-blue: var(--color-v2f-blue);
+  --color-v2f-blue-soft: var(--color-v2f-blue-soft);
+  --color-v2f-gold: var(--color-v2f-gold);
+  --color-v2f-page: var(--color-v2f-page);
+  --color-v2f-warn: var(--color-v2f-warn);
+  --color-v2f-warn-ink: var(--color-v2f-warn-ink);
+  --color-v2f-ok: var(--color-v2f-ok);
+  --color-v2f-ok-ink: var(--color-v2f-ok-ink);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), var(--font-tamil), Arial, Helvetica, sans-serif;
 }
 
 .font-heading {
-  font-family: var(--font-heading), var(--font-sans), sans-serif;
+  font-family: var(--font-heading), var(--font-sans), var(--font-tamil), sans-serif;
 }
 
 .font-label {

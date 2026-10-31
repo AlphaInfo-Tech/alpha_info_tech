@@ -10,7 +10,7 @@ import { company, requestAccess, voice2Fill } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Request Access to Voice2Fill",
   description:
-    "Request a Voice2Fill account for your service centre or office. Fill web forms by speaking Tamil or English on your phone.",
+    "Request a Voice2Fill account for your service centre or office. Serve more applicants with the same staff. Free 7-day trial.",
 };
 
 const whatsappHref = `https://wa.me/${company.whatsapp.replace(/\D/g, "")}`;

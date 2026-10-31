@@ -11,13 +11,13 @@ export default function Voice2FillTeaser() {
           <div>
             <SectionHeading
               eyebrow="New · Voice2Fill"
-              title="Fill web forms by speaking Tamil or English"
-              description="Scan a QR code, tap the mic on your phone and say the answers. They appear in the form on your computer as you speak. Built for service centres and anyone tired of typing."
+              title="Clear the queue without hiring another typist"
+              description="Applicants speak Tamil, English or Tanglish on their own phone, and the form on your computer fills in English. Built for service centres that want to serve more people with the same staff."
             />
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/request-access">Request Access</Button>
+              <Button href="/request-access">Start the Free Trial</Button>
               <Button href="/voice2fill" variant="secondary">
-                See how it works
+                See what it saves you
               </Button>
             </div>
           </div>

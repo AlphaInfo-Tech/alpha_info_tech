@@ -513,14 +513,12 @@ export const socialMedia = {
 };
 
 export const voice2Fill = {
-  eyebrow: "Voice2Fill · Chrome Extension",
-  title: "Fill web forms by speaking on your phone",
-  languages: "In Tamil, English or Tanglish.",
+  eyebrow: "Voice2Fill · For e-Sevai, CSC and browsing centres",
+  title: "Clear the queue without hiring another typist",
+  taglineTamil: "சொன்னா போதும்!",
   intro:
-    "Voice2Fill reads the form on your computer and shows a QR code. Scan it with your phone, tap the mic and say the answers. They appear in the form on your computer as you speak. Photos and documents go in from your phone's camera, already resized to the site's rules.",
-  tagline: "No profiles to set up, no text to paste, nothing to type.",
-  accountNote:
-    "You need a Voice2Fill account (phone number and PIN) to sign in. New accounts start with a free 7-day trial.",
+    "Applicants speak their details in Tamil, English or Tanglish on their own phone. The form on your computer fills in English. You check it and submit it, so the same staff can serve more people.",
+  accountNote: "Free 7-day trial with 15 voice minutes. No card needed.",
   // Chrome Web Store listing. Leave empty until the extension is published.
   storeUrl: "",
 
@@ -540,156 +538,239 @@ export const voice2Fill = {
     activationTime: "usually within 2 hours (9 am – 9 pm)",
   },
 
-  steps: [
+  // The problems a centre owner has, in the order they appear on the page.
+  problems: [
     {
-      title: "Scan the form",
-      description: "Open a web form, click the extension and choose “Scan form on this page”.",
+      key: "queue",
+      poster: "/voice2fill/posters/f1.png",
+      worryTamil: "வரிசை நீளம், customer அடுத்த கடைக்கு போறாங்க",
+      worry: "Long queue, customers walk to the next centre",
+      answerTamil: "5 பேர் ஒரே நேரத்துல அவங்க phone-ல சொல்லலாம்",
+      answer: "5 people speak on their own phones at once",
+      hook: "The queue is long, and there is only one of you.",
+      cost: "On busy days people wait for hours or walk to the next centre. Everyone who leaves is a fee you don't earn.",
+      solution: [
+        "Up to 5 forms fill at once, one browser tab per applicant, each with its own QR code.",
+        "People in the queue give their details on their own phones while you finish with the current applicant.",
+        "“Start over” clears the answers, so the next applicant can use the same QR code.",
+      ],
+      tamil: "ஒரே நேரத்தில் 5 விண்ணப்பதாரர்கள் தங்கள் சொந்த phone-இல் விவரங்களைக் கூறலாம். காத்திருப்பு நேரம் குறையும்.",
     },
     {
-      title: "Scan the QR code",
-      description:
-        "Scan the QR code with your phone. It opens in the phone's browser; there is no app to install.",
+      key: "rejection",
+      poster: "/voice2fill/posters/f2.png",
+      worryTamil: "ஒரு எழுத்து தப்பு, application reject",
+      worry: "One wrong letter, application rejected",
+      answerTamil: "Applicant தானே phone-ல சரிபார்க்கிறாங்க",
+      answer: "The applicant checks their own details",
+      hook: "One wrong letter, and the application is rejected.",
+      cost: "The citizen has to come back, you do the work twice, and your centre takes the blame.",
+      solution: [
+        "The applicant sees their own answers on their phone and checks them before sending.",
+        "Names can be spelled letter by letter and corrected the way people talk: “no, not Jahan, Jagan”.",
+        "Unclear answers come back as “Did you mean…?” buttons. Nothing is guessed silently.",
+      ],
+      tamil: "விண்ணப்பதாரரே தமது விவரங்களை phone-இல் சரிபார்க்கிறார். தெளிவில்லாத பதில்கள் ஊகிக்கப்படுவதில்லை; உறுதிசெய்யக் கேட்கப்படும்.",
     },
     {
-      title: "Tap the mic and speak",
-      description: "“My name is Saurav, phone 98765 43210, district Salem.”",
+      key: "rush",
+      poster: "/voice2fill/posters/f3.png",
+      worryTamil: "Scheme திறந்தா கூட்டம் தாங்க முடியல",
+      worry: "A new scheme opens and the rush is too much",
+      answerTamil: "அதே staff, அதிக பேருக்கு service",
+      answer: "Same staff, more people served",
+      hook: "A new scheme opens, and the rush is too much.",
+      cost: "Rush days could be your best earning days, but one keyboard limits how many people you can serve.",
+      solution: [
+        "Applicants start giving their details while they wait, so more of the form is done when you reach them.",
+        "You serve more people with the same staff and the same computers.",
+        "State → District → Taluk → Village dropdowns are filled in order, so long forms don't slow you down.",
+      ],
+      tamil: "State, District, Taluk, Village போன்ற தொடர் dropdown-களும், பல படிகள் கொண்ட form-களும் வரிசைப்படி நிரப்பப்படும்.",
     },
     {
-      title: "Press “Fill form” once",
-      description:
-        "After that, new answers fill the page automatically and each changed field is highlighted.",
+      key: "typist",
+      poster: "/voice2fill/posters/f4.png",
+      worryTamil: "வேகமா டைப் பண்றவர் ஒருத்தர் தான்",
+      worry: "Only one fast typist. What if they leave?",
+      answerTamil: "Screen படிக்க தெரிஞ்சா யார் வேணாலும் பண்ணலாம்",
+      answer: "Anyone who can read the screen can run the counter",
+      hook: "Your fastest typist took the day off.",
+      cost: "When a centre depends on one person's typing speed, one absence slows everything down.",
+      solution: [
+        "Anyone who can read the screen can run the counter.",
+        "The applicant speaks. The operator checks and submits.",
+        "New staff don't have to be fast typists to keep the queue moving.",
+      ],
+      tamil: "தட்டச்சு வேகம் இனி தடையல்ல. திரையைப் படிக்கத் தெரிந்த எவரும் counter-ஐ நடத்தலாம்.",
     },
     {
-      title: "Check and submit",
-      description:
-        "Check the form and submit it yourself. Undo puts the page back the way it was.",
+      key: "photos",
+      poster: "/voice2fill/posters/h2.png",
+      worryTamil: "போட்டோ 50 KB-க்குள்ள வேணுமா?",
+      worry: "Photo must be under 50 KB?",
+      answerTamil: "",
+      answer: "The phone makes it fit",
+      hook: "“Photo must be JPG, under 50 KB.”",
+      cost: "Resizing on separate websites and moving files between phones can take longer than filling the form.",
+      solution: [
+        "The extension reads the website's upload rules, such as file type, size and page limits.",
+        "The applicant takes a photo on their phone, and the phone converts it to fit.",
+        "Several paper pages become one A4 PDF within the site's limit.",
+      ],
+      tamil: "Photo, PDF ஆகியவற்றை website-இன் விதிகளுக்கு ஏற்ப phone தானாக மாற்றுகிறது. தனியாக resize செய்ய வேண்டியதில்லை.",
+    },
+    {
+      key: "documents",
+      poster: "/voice2fill/posters/f5.png",
+      worryTamil: "ID card, photo எல்லாம் உங்க phone-ல",
+      worry: "Citizens' ID cards and photos piling up on your phones",
+      answerTamil: "Photo நேரா form-க்கு, அப்புறம் delete",
+      answer: "Photos go straight to the form, then are deleted",
+      hook: "Citizens' ID cards are piling up on staff phones.",
+      cost: "Documents forwarded through chat apps stay on phones long after the work is done. That is a risk for the citizen and for your centre.",
+      solution: [
+        "Photos and PDFs go straight from the applicant's phone into the form, and are then deleted.",
+        "Voice recordings are never stored.",
+        "Spoken answers are deleted automatically within about an hour.",
+      ],
+      tamil: "ஆவணங்கள் நேரடியாக form-க்குச் சென்று, பின்னர் நீக்கப்படுகின்றன. ஊழியர்களின் phone-இல் எதுவும் தங்குவதில்லை.",
     },
   ],
 
-  speakNaturally: [
-    {
-      text: "Tamil, English or Tanglish, even mixed in one sentence.",
-      examples: ["en peru Saurav, ooru Chennai"],
+  // Starting values only: not measured. Replace with pilot numbers when they exist.
+  calculator: {
+    defaults: {
+      perDay: "40",
+      minutesToday: "10",
+      minutesVoice: "6",
+      workingDays: "26",
+      fee: "",
     },
-    {
-      text: "Say numbers in pieces.",
-      examples: ["nine eight seven six…", "98765 – 43210"],
-    },
-    {
-      text: "Spell names letter by letter, including Tamil letter names.",
-      examples: ["S A U R A V → Saurav"],
-    },
-    {
-      text: "Correct yourself naturally.",
-      examples: ["no, not Sourav, Saurav", "the last digit is 5", "pincode la 455 illa 445"],
-    },
-    {
-      text: "Voice commands.",
-      examples: ["start over", "send it", "what is left?"],
-    },
-    {
-      text: "Speak as long as you need. Long answers are split and joined again, so nothing is lost.",
-    },
-    {
-      text: "Values are filled in English, even when you speak Tamil.",
-    },
-  ],
+    note: "These starting numbers are examples, not measured results. Time saved depends on the form. Change them to match your counter, or measure them during the free trial.",
+  },
 
-  realWorldForms: [
-    {
-      key: "dependent",
-      title: "Dependent dropdowns",
-      description:
-        "State → District → Taluk → Village. It waits for each list to load and picks the option you said.",
-    },
-    {
-      key: "spelling",
-      title: "Spelling variants",
-      description:
-        "“Omaloor” or “Omalur”, Tamil script or short forms. Unclear matches go to your phone as “Did you mean…?” buttons and are never guessed silently.",
-    },
-    {
-      key: "custom",
-      title: "Custom dropdowns",
-      description:
-        "react-select, MUI, choices.js, select2 and standard accessible comboboxes.",
-    },
-    {
-      key: "frameworks",
-      title: "React, Vue, Angular & HTML",
-      description:
-        "Values are entered the way a person types, so the site's own checks still run.",
-    },
-    {
-      key: "multistep",
-      title: "Multi-step forms",
-      description:
-        "Fields that appear on step 2, or after ticking “Other”, show up on your phone right away.",
-    },
-    {
-      key: "frames",
-      title: "Frames & shadow DOM",
-      description: "Forms inside frames and shadow DOM on the same site.",
-    },
-  ],
+  footfall: {
+    tamil: "இங்கே தமிழில் சொன்னா போதும்",
+    intro:
+      "Many applicants can't read an English form, and every label has to be explained across the counter. Give them a reason to choose your centre.",
+    points: [
+      "Applicants speak in Tamil, English or Tanglish, and the form fills in English.",
+      "Every field on the phone shows both languages: “தந்தை பெயர் · Father's name”.",
+      "Elderly and first-time applicants can give their details without typing a word.",
+    ],
+    signUrl: "/voice2fill/posters/counter-sign-a4.png",
+  },
 
-  uploads: {
-    intro: "Upload fields are filled from the phone's camera, not by voice.",
-    items: [
-      "The extension reads the site's rules (“JPG only, below 50 KB”, exact pixel size, page limits).",
-      "Take a photo or choose a file, then rotate, crop or add more pages.",
-      "Your phone converts it to fit: a compressed JPG, or several photos combined into one A4 PDF.",
-      "The file goes into the website's own upload field, so the site checks it normally. If the site rejects it, your phone tells you why.",
-      "Location and camera details (EXIF/GPS) are removed from photos.",
+  edge: {
+    columns: ["Typing by hand", "Saved-profile autofill tools", "Voice2Fill"],
+    rows: [
+      { label: "Several applicants at once", values: ["One at a time", "One at a time", "Up to 5 at once"] },
+      { label: "A new person every time", values: ["Slow every time", "Needs a new profile", "Just speak"] },
+      { label: "Applicant speaks Tamil or Tanglish", values: ["Operator translates", "Usually not supported", "Yes"] },
+      { label: "Photos sized to the site's rules", values: ["Separate resizer sites", "Usually not supported", "Done on the phone"] },
+      { label: "Applicant checks their own details", values: ["Read out at the counter", "No", "On their own phone"] },
+      { label: "Applicant details kept afterwards", values: ["Often left on staff phones", "Saved in a profile", "Answers deleted in about an hour"] },
     ],
   },
 
-  severalForms: [
-    "Fill up to 5 forms at once, one per browser tab, each with its own QR code and phone.",
-    "The popup always shows the form in the tab you opened it on.",
-    "“Start over” clears the answers for the next applicant on the same QR code, useful at service centres and help desks.",
+  steps: [
+    {
+      title: "Scan the form",
+      description:
+        "Open the web form in Chrome, click the extension and choose “Scan form on this page”. A QR code appears.",
+    },
+    {
+      title: "The applicant speaks",
+      description:
+        "They scan the QR code with their phone, with no app to install, tap the mic and say: “My name is Ramesh Kumar, phone 98765 43210, district Salem.”",
+    },
+    {
+      title: "You check and submit",
+      description:
+        "Press “Fill form” once. New answers then fill in by themselves, each one highlighted. Voice2Fill never submits for you, and Undo puts the page back.",
+    },
   ],
 
-  phoneLanguage: [
-    "Switch the whole phone screen between தமிழ் and English.",
-    "Field labels show both: “தந்தை பெயர் · Father's name”.",
-    "Clear messages for a blocked microphone, a lost connection, an expired QR code and required fields still empty.",
-  ],
-
-  audience: [
-    "Citizen service centre operators filling applications for many people a day",
-    "Office staff doing repetitive data entry",
-    "Anyone who finds typing slow, or is more comfortable speaking Tamil than typing English",
-    "Help desks taking details over the counter",
+  features: [
+    {
+      key: "speech",
+      title: "Speech that fits how people talk",
+      items: [
+        "Tamil, English or Tanglish, even mixed in one sentence: “en peru Ramesh, ooru Chennai”.",
+        "Numbers in pieces and names letter by letter, including Tamil letter names.",
+        "Natural corrections: “the last digit is 5”, “pincode la 455 illa 445”.",
+        "Voice commands: “start over”, “send it”, “what is left?”.",
+      ],
+    },
+    {
+      key: "forms",
+      title: "Works on real application forms",
+      items: [
+        "Spelling variants like “Omaloor” or “Omalur” match the right dropdown option.",
+        "Fields on the next step, or after ticking “Other”, appear on the phone right away.",
+        "Values are entered the way a person types, so the site's own checks still run.",
+      ],
+    },
+    {
+      key: "uploads",
+      title: "Photos and documents",
+      items: [
+        "Rotate, crop or add pages on the phone before sending.",
+        "The file goes into the website's own upload field. If the site rejects it, the phone shows why.",
+        "Location and camera details are removed from photos.",
+      ],
+    },
+    {
+      key: "counter",
+      title: "Made for a busy counter",
+      items: [
+        "“Typing only” lets the applicant type on their phone instead. It uses no voice minutes.",
+        "The phone screen switches between தமிழ் and English.",
+        "The Tamil helper explains any English label or help line on the phone.",
+      ],
+    },
   ],
 
   privacy: [
-    "Voice is sent for transcription and is not stored.",
-    "Spoken answers and their text are deleted automatically within about an hour.",
-    "Form session records (page address and field labels) are deleted after 30 days.",
-    "Uploaded photos and PDFs are stored privately and deleted as soon as the computer receives them, or when the tab closes.",
-    "Photos and documents are never sent to the AI services.",
-    "QR codes work once and expire after 10 minutes. A phone link lasts 30 minutes.",
-    "The extension never submits a form for you. You review and submit.",
-    "Your data is not sold, not used for advertising and not used for anything except filling your form.",
+    "Voice recordings are never stored.",
+    "Spoken answers are deleted automatically within about an hour.",
+    "Photos and PDFs are deleted as soon as the computer receives them.",
+    "Nothing is sold or used for advertising.",
   ],
 
-  requirements: [
-    "A Voice2Fill account (phone number and PIN; free trial for new accounts)",
-    "A phone with a browser and a microphone",
-    "Chrome on the computer with the form",
-  ],
-
-  notSupported: [
-    "Upload fields inside another website's embedded frame",
-    "Saving your details to reuse on future forms",
+  faqs: [
+    {
+      q: "Will it work on the portal I use?",
+      a: "Most web forms work. Some websites block automatic filling for certain fields; the popup shows which ones so you can type them. The free trial is the best way to check the forms you fill every day.",
+    },
+    {
+      q: "What if the applicant has no smartphone?",
+      a: "Scan the QR code with your own or a staff phone and let the applicant speak into it. “Start over” then clears the answers for the next person.",
+    },
+    {
+      q: "What about captcha and OTP?",
+      a: "Type these on the computer. They can't be filled by voice.",
+    },
+    {
+      q: "Is this a government service?",
+      a: "No. Voice2Fill is an independent tool and is not affiliated with any government department or service.",
+    },
+    {
+      q: "What do I need to start?",
+      a: "Chrome on the computer with the form, and a phone with a browser and a microphone. There is no app to install. New accounts are set up by our team.",
+    },
+    {
+      q: "What can't it do yet?",
+      a: "It can't fill upload fields inside another website's embedded frame, and it doesn't save details to reuse on future forms.",
+    },
   ],
 };
 
 export const requestAccess = {
   eyebrow: "Request Access",
   title: "Get Voice2Fill for your centre",
-  lead: "Fill web forms by speaking Tamil or English on your phone.",
+  lead: "Serve more applicants with the same staff.",
   leadTamil: "குரலால் படிவங்களை நிரப்புங்கள்.",
   intro:
     "Voice2Fill accounts are set up by our team, so every user gets a sign-in that works from day one. New accounts start with a free 7-day trial (15 voice minutes). Send the form below and we'll contact you on your mobile (WhatsApp) number within 2 working days.",

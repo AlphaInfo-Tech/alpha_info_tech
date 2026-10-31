@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Sora, Roboto_Mono } from "next/font/google";
+import { Inter, Sora, Roboto_Mono, Noto_Sans_Tamil } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -20,6 +20,14 @@ const robotoMono = Roboto_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
   weight: ["400", "500"],
+});
+
+// Only the Voice2Fill pages use Tamil, so don't preload it on every page.
+const notoTamil = Noto_Sans_Tamil({
+  variable: "--font-tamil",
+  subsets: ["tamil"],
+  weight: ["500", "600", "700"],
+  preload: false,
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.alphainfotech.org";
@@ -63,7 +71,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${sora.variable} ${robotoMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${sora.variable} ${robotoMono.variable} ${notoTamil.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white text-ink">
         <Navbar />
