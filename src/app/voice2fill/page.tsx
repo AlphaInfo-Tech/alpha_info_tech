@@ -22,7 +22,7 @@ import { voice2Fill } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Voice2Fill for Service Centres",
   description:
-    "Clear the queue without hiring another typist. Applicants speak Tamil, English or Tanglish on their own phone, and the form on your computer fills in English. Free 7-day trial.",
+    "Stop typing every form. Start serving more customers. Applicants speak Tamil, English or Tanglish on their own phone, and the form on your computer fills in English. Free 7-day trial.",
 };
 
 const featureIcons = {

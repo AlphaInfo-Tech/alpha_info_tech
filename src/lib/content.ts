@@ -514,7 +514,7 @@ export const socialMedia = {
 
 export const voice2Fill = {
   eyebrow: "Voice2Fill · For e-Sevai, CSC and browsing centres",
-  title: "Clear the queue without hiring another typist",
+  title: "Stop typing every form. Start serving more customers.",
   taglineTamil: "சொன்னா போதும்!",
   intro:
     "Applicants speak their details in Tamil, English or Tanglish on their own phone. The form on your computer fills in English. You check it and submit it, so the same staff can serve more people.",

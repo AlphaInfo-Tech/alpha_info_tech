@@ -11,7 +11,7 @@ export default function Voice2FillTeaser() {
           <div>
             <SectionHeading
               eyebrow="New · Voice2Fill"
-              title="Clear the queue without hiring another typist"
+              title="Stop typing every form. Start serving more customers."
               description="Applicants speak Tamil, English or Tanglish on their own phone, and the form on your computer fills in English. Built for service centres that want to serve more people with the same staff."
             />
             <div className="mt-8 flex flex-wrap gap-4">
