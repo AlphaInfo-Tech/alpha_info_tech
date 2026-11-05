@@ -557,22 +557,6 @@ export const voice2Fill = {
       tamil: "ஒரே நேரத்தில் 5 விண்ணப்பதாரர்கள் தங்கள் சொந்த phone-இல் விவரங்களைக் கூறலாம். காத்திருப்பு நேரம் குறையும்.",
     },
     {
-      key: "rejection",
-      poster: "/voice2fill/posters/f2.png",
-      worryTamil: "ஒரு எழுத்து தப்பு, application reject",
-      worry: "One wrong letter, application rejected",
-      answerTamil: "Applicant தானே phone-ல சரிபார்க்கிறாங்க",
-      answer: "The applicant checks their own details",
-      hook: "One wrong letter, and the application is rejected.",
-      cost: "The citizen has to come back, you do the work twice, and your centre takes the blame.",
-      solution: [
-        "The applicant sees their own answers on their phone and checks them before sending.",
-        "Names can be spelled letter by letter and corrected the way people talk: “no, not Jahan, Jagan”.",
-        "Unclear answers come back as “Did you mean…?” buttons. Nothing is guessed silently.",
-      ],
-      tamil: "விண்ணப்பதாரரே தமது விவரங்களை phone-இல் சரிபார்க்கிறார். தெளிவில்லாத பதில்கள் ஊகிக்கப்படுவதில்லை; உறுதிசெய்யக் கேட்கப்படும்.",
-    },
-    {
       key: "rush",
       poster: "/voice2fill/posters/f3.png",
       worryTamil: "Scheme திறந்தா கூட்டம் தாங்க முடியல",
@@ -660,18 +644,6 @@ export const voice2Fill = {
       "Elderly and first-time applicants can give their details without typing a word.",
     ],
     signUrl: "/voice2fill/posters/counter-sign-a4.png",
-  },
-
-  edge: {
-    columns: ["Typing by hand", "Saved-profile autofill tools", "Voice2Fill"],
-    rows: [
-      { label: "Several applicants at once", values: ["One at a time", "One at a time", "Up to 5 at once"] },
-      { label: "A new person every time", values: ["Slow every time", "Needs a new profile", "Just speak"] },
-      { label: "Applicant speaks Tamil or Tanglish", values: ["Operator translates", "Usually not supported", "Yes"] },
-      { label: "Photos sized to the site's rules", values: ["Separate resizer sites", "Usually not supported", "Done on the phone"] },
-      { label: "Applicant checks their own details", values: ["Read out at the counter", "No", "On their own phone"] },
-      { label: "Applicant details kept afterwards", values: ["Often left on staff phones", "Saved in a profile", "Answers deleted in about an hour"] },
-    ],
   },
 
   steps: [
