@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 import { Button } from "@/components/Button";
 import RazorpayButton from "@/components/RazorpayButton";
 import { voice2Fill } from "@/lib/content";
-import { getPlanLimits, type AllPlanLimits, type PlanKey, type PlanLimits } from "@/lib/planLimits";
+import { getPlanLimits, type PlanKey, type PlanLimits } from "@/lib/planLimits";
 
 const { pricing } = voice2Fill;
 type LimitKey = keyof PlanLimits;
@@ -134,91 +134,6 @@ function PlanCard({
   );
 }
 
-const compareColumns = [
-  { key: "trial", name: "Trial", price: "Free · 7 days" },
-  ...pricing.cards.map((card) => {
-    const plan = voice2Fill.plans.find((p) => p.key === card.key)!;
-    return { key: card.key, name: plan.name, price: plan.price };
-  }),
-] as { key: PlanKey; name: string; price: string }[];
-
-function CompareTable({ limits }: { limits: AllPlanLimits }) {
-  const proCell = (key: string) => (key === "pro" ? "bg-[#F3F7FE]" : "");
-  return (
-    <div className="overflow-x-auto rounded-xl border border-black/10 bg-white">
-      <table className="w-full min-w-[720px] border-collapse text-sm">
-        <thead>
-          <tr>
-            <th scope="col" className="p-3 text-left">
-              <span className="sr-only">Plan</span>
-            </th>
-            {compareColumns.map((col) => (
-              <th
-                key={col.key}
-                scope="col"
-                className={`p-3 text-center align-bottom font-semibold text-ink ${proCell(col.key)}`}
-              >
-                {col.name}
-                <small className="block text-xs font-normal text-ink-muted">{col.price}</small>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td
-              colSpan={compareColumns.length + 1}
-              className="border-t border-black/10 bg-surface px-3 py-2 text-xs font-semibold uppercase tracking-wider text-ink-muted"
-            >
-              Each month (Trial: 7 days)
-            </td>
-          </tr>
-          {limitRows.map((row) => (
-            <tr key={row.key} className="border-t border-black/10">
-              <th scope="row" className="p-3 text-left font-semibold text-ink">
-                {row.label}
-                {row.sub && <small className="block text-xs font-normal text-ink-muted">{row.sub}</small>}
-              </th>
-              {compareColumns.map((col) => (
-                <td
-                  key={col.key}
-                  className={`p-3 text-center font-semibold tabular-nums text-ink ${proCell(col.key)}`}
-                >
-                  {num(limits[col.key][row.key])}
-                </td>
-              ))}
-            </tr>
-          ))}
-          <tr>
-            <td
-              colSpan={compareColumns.length + 1}
-              className="border-t border-black/10 bg-surface px-3 py-2 text-xs font-semibold uppercase tracking-wider text-ink-muted"
-            >
-              Features
-            </td>
-          </tr>
-          {pricing.features.map((feature) => (
-            <tr key={feature.title} className="border-t border-black/10">
-              <th scope="row" className="p-3 text-left font-normal text-ink">
-                {feature.title}
-                <small className="block text-xs text-ink-muted">{feature.sub}</small>
-              </th>
-              {compareColumns.map((col) => (
-                <td key={col.key} className={`p-3 text-center ${proCell(col.key)}`}>
-                  <span className="inline-flex">
-                    <Tick size={20} />
-                    <span className="sr-only">Included</span>
-                  </span>
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
 export default async function PricingSection() {
   const limits = await getPlanLimits();
   return (
@@ -261,11 +176,6 @@ export default async function PricingSection() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="mt-16">
-          <h3 className="font-heading mb-4 text-lg font-bold text-ink">Compare plans</h3>
-          <CompareTable limits={limits} />
         </div>
 
         <p className="mt-10 text-center text-sm text-ink-muted">

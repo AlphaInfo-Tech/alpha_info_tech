@@ -553,11 +553,11 @@ export const voice2Fill = {
     // Each plan's limits for its period (Trial: 7 days, others: 30 days).
     // The live numbers come from the database (src/lib/planLimits.ts); these are the fallback.
     limits: {
-      trial: { minutes: 15, voiceQr: 15, nonVoiceQr: 5, documents: 10, computers: 1 },
-      starter: { minutes: 60, voiceQr: 60, nonVoiceQr: 20, documents: 30, computers: 1 },
-      basic: { minutes: 150, voiceQr: 150, nonVoiceQr: 50, documents: 80, computers: 1 },
-      pro: { minutes: 400, voiceQr: 400, nonVoiceQr: 150, documents: 250, computers: 2 },
-      business: { minutes: 1200, voiceQr: 1200, nonVoiceQr: 500, documents: 800, computers: 3 },
+      trial: { minutes: 15, voiceQr: 10, nonVoiceQr: 10, documents: 20, computers: 1 },
+      starter: { minutes: 60, voiceQr: 40, nonVoiceQr: 120, documents: 200, computers: 1 },
+      basic: { minutes: 150, voiceQr: 100, nonVoiceQr: 250, documents: 300, computers: 1 },
+      pro: { minutes: 400, voiceQr: 300, nonVoiceQr: 450, documents: 600, computers: 2 },
+      business: { minutes: 1000, voiceQr: 800, nonVoiceQr: 1250, documents: 1500, computers: 3 },
     },
     limitRows: [
       { key: "minutes", label: "Voice minutes", sub: "Only recording time counts" },
