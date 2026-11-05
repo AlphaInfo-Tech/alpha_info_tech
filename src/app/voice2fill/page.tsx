@@ -11,7 +11,7 @@ import {
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
-import RazorpayButton from "@/components/RazorpayButton";
+import PricingSection from "@/components/voice2fill/PricingSection";
 import SavingsCalculator from "@/components/voice2fill/SavingsCalculator";
 import { voice2Fill } from "@/lib/content";
 
@@ -237,59 +237,7 @@ export default function Voice2FillPage() {
         </Container>
       </section>
 
-      <section id="plans" className="scroll-mt-24 bg-surface py-24">
-        <Container>
-          <SectionHeading
-            eyebrow="Plans"
-            title="About ₹22 a day on Pro. Plans start at ₹99."
-            description="Pro is ₹649 for 30 days with 400 voice minutes. Only recording time counts. Scanning forms, filling them, photos and typing-only forms use no minutes."
-            align="center"
-          />
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {voice2Fill.plans.map((plan) => (
-              <div
-                key={plan.name}
-                className={`card-notch flex flex-col rounded-xl border bg-white p-6 ${
-                  plan.price === "Free" ? "border-v2f-blue" : "border-black/10"
-                }`}
-              >
-                <span className="font-label text-xs text-v2f-blue">{plan.name}</span>
-                <p className="font-heading mt-3 text-3xl font-bold text-ink">{plan.price}</p>
-                <p className="mt-3 text-sm font-medium text-ink">
-                  {plan.minutes} voice minutes
-                </p>
-                <p className="mt-1 text-sm text-ink-muted">{plan.duration}</p>
-                <div className="mt-auto pt-6">
-                  {plan.key === "trial" ? (
-                    <Link
-                      href="/request-access"
-                      className="inline-flex w-full items-center justify-center rounded-lg border border-black/10 bg-white px-5 py-3 text-sm font-semibold text-ink hover:bg-surface-dim"
-                    >
-                      Start the free trial
-                    </Link>
-                  ) : (
-                    <RazorpayButton buttonId={plan.razorpayButtonId} planName={plan.name} />
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="mt-10 text-center text-sm text-ink-muted">
-            Pay by UPI, card, netbanking or wallet through Razorpay, and enter
-            your <strong className="text-ink">Voice2Fill mobile number</strong>{" "}
-            at checkout. Plans don&apos;t renew automatically.{" "}
-            <Link href="/voice2fill/terms" className="font-semibold text-v2f-blue hover:underline">
-              Plans, payments &amp; refunds →
-            </Link>
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/request-access">Start the Free Trial</Button>
-            <Button href="/voice2fill/plans" variant="secondary">
-              Renew or Top Up
-            </Button>
-          </div>
-        </Container>
-      </section>
+      <PricingSection />
 
       <section className="bg-navy py-24">
         <Container className="max-w-4xl">

@@ -527,7 +527,7 @@ export const voice2Fill = {
   // tell which plan was bought. razorpayButtonId is the button's "pl_…" id.
   plans: [
     { key: "trial", name: "Trial", price: "Free", amountPaise: 0, minutes: "15", duration: "7 days (once per person)", razorpayButtonId: "" },
-    { key: "starter", name: "Starter", price: "₹99", amountPaise: 9900, minutes: "60", duration: "30 days", razorpayButtonId: "pl_Ttnh64CinRbJD9" },
+    { key: "starter", name: "Starter", price: "₹149", amountPaise: 14900, minutes: "60", duration: "30 days", razorpayButtonId: "" },
     { key: "basic", name: "Basic", price: "₹249", amountPaise: 24900, minutes: "150", duration: "30 days", razorpayButtonId: "pl_Tto3Urj1Rfw7us" },
     { key: "pro", name: "Pro", price: "₹649", amountPaise: 64900, minutes: "400", duration: "30 days", razorpayButtonId: "pl_Tto7qkM3q2Meed" },
     { key: "business", name: "Business", price: "₹1,949", amountPaise: 194900, minutes: "1,200", duration: "30 days", razorpayButtonId: "pl_Tto9ePtW42sbIs" },
@@ -536,6 +536,57 @@ export const voice2Fill = {
 
   payment: {
     activationTime: "usually within 2 hours (9 am – 9 pm)",
+  },
+
+  // The pricing section. Prices and limits must match Admin → Plans.
+  // Never describe a plan as a number of forms.
+  pricing: {
+    titleTamil: "எல்லா plan-லயும் எல்லா வசதியும்",
+    subtitle: "Every feature in every plan. Pick how much you need each month.",
+    trial: "every feature · no card needed",
+    cards: [
+      { key: "starter", for: "One person, starting out", perDay: 5, tag: "" },
+      { key: "basic", for: "A small centre", perDay: 8, tag: "" },
+      { key: "pro", for: "A busy counter", perDay: 22, tag: "About ₹22 a day" },
+      { key: "business", for: "Several counters", perDay: 65, tag: "" },
+    ],
+    // Each plan's limits for its period (Trial: 7 days, others: 30 days).
+    // The live numbers come from the database (src/lib/planLimits.ts); these are the fallback.
+    limits: {
+      trial: { minutes: 15, voiceQr: 15, nonVoiceQr: 5, documents: 10, computers: 1 },
+      starter: { minutes: 60, voiceQr: 60, nonVoiceQr: 20, documents: 30, computers: 1 },
+      basic: { minutes: 150, voiceQr: 150, nonVoiceQr: 50, documents: 80, computers: 1 },
+      pro: { minutes: 400, voiceQr: 400, nonVoiceQr: 150, documents: 250, computers: 2 },
+      business: { minutes: 1200, voiceQr: 1200, nonVoiceQr: 500, documents: 800, computers: 3 },
+    },
+    limitRows: [
+      { key: "minutes", label: "Voice minutes", sub: "Only recording time counts" },
+      { key: "voiceQr", label: "Voice Form Fill QR", sub: "Each Generate QR with voice" },
+      { key: "nonVoiceQr", label: "Non Voice Form Fill QR", sub: "Each Generate QR with Typing only" },
+      { key: "documents", label: "Documents", sub: "Phone photos, PDFs and scans" },
+      { key: "computers", label: "Computers signed in at once", sub: "" },
+    ],
+    features: [
+      { title: "Tamil, English or Tanglish", sub: "Even mixed in one sentence" },
+      { title: "Dropdowns filled in order", sub: "“Which one did you mean?” on the phone" },
+      { title: "Scan from your scanner", sub: "Straight into the upload field" },
+      { title: "Photos from phone or WhatsApp", sub: "Take a photo or pick a file" },
+      { title: "Photos into one PDF", sub: "Sized to the site’s rules" },
+      { title: "Big PDFs made smaller", sub: "Every page kept" },
+      { title: "Up to 5 forms at once", sub: "One QR per customer" },
+      { title: "Latest forms · QR for other", sub: "Customers fill before their turn" },
+      { title: "Answers wait 2 hours", sub: "Even if the site logs you out" },
+      { title: "Typing only for noisy counters", sub: "No mic, no voice minutes" },
+      { title: "Tamil typing and Tamil helper", sub: "Tamil typing uses voice minutes" },
+    ],
+    notes: [
+      "Need more? Extra 50 voice minutes for ₹79, or add documents, QRs or a computer to your plan.",
+      "Scanning, typing and filling use no voice minutes.",
+      "Voice Form Fill QR / Non Voice Form Fill QR: each click on Generate QR counts one. A new QR for an expired one that nobody scanned doesn’t count.",
+      "Documents: each file that goes into a form’s upload field, from the phone or your scanner. A new file for the same field doesn’t count again.",
+      "When one limit runs out, only that feature stops; everything else keeps working.",
+      "Unused limits don’t carry over; renewing early loses no days.",
+    ],
   },
 
   // The problems a centre owner has, in the order they appear on the page.
