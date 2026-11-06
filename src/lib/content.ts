@@ -527,7 +527,7 @@ export const voice2Fill = {
   // tell which plan was bought. razorpayButtonId is the button's "pl_…" id.
   plans: [
     { key: "trial", name: "Trial", price: "Free", amountPaise: 0, minutes: "15", duration: "7 days (once per person)", razorpayButtonId: "" },
-    { key: "starter", name: "Starter", price: "₹149", amountPaise: 14900, minutes: "60", duration: "30 days", razorpayButtonId: "" },
+    { key: "starter", name: "Starter", price: "₹99", amountPaise: 9900, minutes: "60", duration: "30 days", razorpayButtonId: "pl_Ttnh64CinRbJD9" },
     { key: "basic", name: "Basic", price: "₹249", amountPaise: 24900, minutes: "150", duration: "30 days", razorpayButtonId: "pl_Tto3Urj1Rfw7us" },
     { key: "pro", name: "Pro", price: "₹649", amountPaise: 64900, minutes: "400", duration: "30 days", razorpayButtonId: "pl_Tto7qkM3q2Meed" },
     { key: "business", name: "Business", price: "₹1,949", amountPaise: 194900, minutes: "1,200", duration: "30 days", razorpayButtonId: "pl_Tto9ePtW42sbIs" },
@@ -545,7 +545,7 @@ export const voice2Fill = {
     subtitle: "Every feature in every plan. Pick how much you need each month.",
     trial: "every feature · no card needed",
     cards: [
-      { key: "starter", for: "One person, starting out", perDay: 5, tag: "" },
+      { key: "starter", for: "One person, starting out", perDay: 3, tag: "" },
       { key: "basic", for: "A small centre", perDay: 8, tag: "" },
       { key: "pro", for: "A busy counter", perDay: 22, tag: "About ₹22 a day" },
       { key: "business", for: "Several counters", perDay: 65, tag: "" },
