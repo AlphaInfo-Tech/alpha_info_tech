@@ -7,7 +7,7 @@ import { ReactNode } from "react";
 import Container from "@/components/Container";
 import { Button } from "@/components/Button";
 import { LegalTable } from "@/components/LegalLayout";
-import { company } from "@/lib/content";
+import { company, voice2Fill } from "@/lib/content";
 
 // How to use page (Tanglish: Tamil script, with English words such as Phone,
 // QR, form, scan and every button name written in English, as people say them
@@ -18,7 +18,7 @@ import { company } from "@/lib/content";
 export const metadata: Metadata = {
   title: "How to Use Voice2Fill",
   description:
-    "Voice2Fill எப்படி use பண்றது: QR scan, voice, Typing only, Phone-ல photo, Fetch from scan, QR for other, Tamil typing, plan counters, privacy. Step by step, in Tamil.",
+    "Voice2Fill எப்படி use பண்றது: Chrome, Edge-ல extension install, QR scan, voice, Typing only, Phone-ல photo, Fetch from scan, QR for other, Tamil typing, plan counters, privacy. Step by step, in Tamil.",
 };
 
 const whatsappHref = `https://wa.me/${company.whatsapp.replace(/\D/g, "")}`;
@@ -87,6 +87,97 @@ const sections: {
   poster?: PosterId;
   body: ReactNode;
 }[] = [
+  {
+    id: "install",
+    title: "Extension install பண்றது (Chrome, Edge)",
+    body: (
+      <>
+        <p>
+          Voice2Fill-ஐ use பண்றதுக்கு முன்னாடி, form fill பண்ற computer-ல
+          ஒரு தடவை மட்டும் extension install பண்ணுங்க. Google Chrome அல்லது
+          Microsoft Edge, ரெண்டுலயும் வேலை செய்யும். Browser latest version-ல
+          இருக்கணும்.
+        </p>
+        <p>
+          {voice2Fill.storeUrl ? (
+            <>
+              Install link:{" "}
+              <a
+                href={voice2Fill.storeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Voice2Fill on the Chrome Web Store
+              </a>
+              . Chrome-க்கும் Edge-க்கும் இதே link தான்.
+            </>
+          ) : (
+            <>
+              Account ready ஆனதும் Chrome Web Store link-ஐ WhatsApp-ல
+              அனுப்புவோம். Chrome-க்கும் Edge-க்கும் இதே link தான். Link
+              கிடைக்கலையா?{" "}
+              <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                WhatsApp {company.whatsapp}
+              </a>
+            </>
+          )}
+        </p>
+
+        <h3>Google Chrome-ல</h3>
+        <ol>
+          <li>
+            Chrome-ல Voice2Fill Chrome Web Store link-ஐ open பண்ணுங்க.
+          </li>
+          <li>
+            <strong>Add to Chrome</strong> click பண்ணுங்க.
+          </li>
+          <li>
+            &quot;Add Voice2Fill?&quot;ன்னு ஒரு சின்ன window வரும்.{" "}
+            <strong>Add extension</strong> click பண்ணுங்க.
+          </li>
+          <li>
+            Toolbar-ல puzzle icon (<strong>Extensions</strong>) click பண்ணி,
+            Voice2Fill பக்கத்துல இருக்கிற pin icon-ஐ click பண்ணுங்க. இப்போ
+            Voice2Fill icon toolbar-லயே எப்பவும் தெரியும்.
+          </li>
+        </ol>
+
+        <h3>Microsoft Edge-ல</h3>
+        <ol>
+          <li>Edge-ல அதே Chrome Web Store link-ஐ open பண்ணுங்க.</li>
+          <li>
+            Page மேல ஒரு banner வரும். முதல் தடவை மட்டும்{" "}
+            <strong>Allow extensions from other stores</strong> click பண்ணி,
+            அடுத்து வர்ற window-ல <strong>Allow</strong> click பண்ணுங்க.
+          </li>
+          <li>
+            <strong>Get</strong> (சில நேரம் <strong>Add to Chrome</strong>னு
+            இருக்கும்) click பண்ணுங்க.
+          </li>
+          <li>
+            &quot;Add Voice2Fill to Microsoft Edge?&quot; window-ல{" "}
+            <strong>Add extension</strong> click பண்ணுங்க.
+          </li>
+          <li>
+            Toolbar-ல puzzle icon (<strong>Extensions</strong>) click பண்ணி,
+            Voice2Fill பக்கத்துல இருக்கிற கண் icon (
+            <strong>Show in toolbar</strong>) click பண்ணுங்க.
+          </li>
+        </ol>
+
+        <p>
+          Install ஆனதும் toolbar-ல Voice2Fill icon click பண்ணுங்க, popup open
+          ஆகும். அடுத்து கீழ இருக்கிற &quot;முதல் நாள்&quot; steps-ல sign in
+          பண்ணுங்க. இந்த page-ல &quot;Chrome&quot;னு சொல்ற எல்லா இடத்திலயும்
+          Edge-லயும் அதே மாதிரி தான்.
+        </p>
+        <p>
+          Customer Phone-ல எதுவும் install பண்ண தேவையில்ல. Extension உங்க
+          computer-ல மட்டும் தான்.
+        </p>
+      </>
+    ),
+  },
   {
     id: "first-day",
     title: "முதல் நாள்",
