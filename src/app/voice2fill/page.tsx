@@ -59,7 +59,7 @@ export default function Voice2FillPage() {
                 Start the Free Trial
               </Button>
               <Button href="/voice2fill/how-it-works" variant="secondary">
-                How It Works
+                How to Use
               </Button>
               <Button href="#savings" variant="secondary">
                 Work Out Your Savings
@@ -284,7 +284,7 @@ export default function Voice2FillPage() {
             className="mt-12 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm"
           >
             {[
-              { href: "/voice2fill/how-it-works", label: "How it works" },
+              { href: "/voice2fill/how-it-works", label: "How to use" },
               { href: "/voice2fill/privacy", label: "Privacy policy" },
               { href: "/voice2fill/terms", label: "Terms & plans" },
               { href: "/voice2fill/support", label: "Support" },

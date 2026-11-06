@@ -79,7 +79,7 @@ const faqs = [
     a: (
       <>
         New accounts start with a free 7-day trial with 15 voice minutes. After
-        that, monthly plans start at ₹99 for 60 voice minutes. Only recording
+        that, monthly plans start at ₹149 for 60 voice minutes. Only recording
         time counts; scanning and filling forms is free. See the{" "}
         <Link href="/voice2fill#plans">plans</Link> and the{" "}
         <Link href="/voice2fill/terms">payment and refund terms</Link>.
